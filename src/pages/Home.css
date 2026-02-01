@@ -1,12 +1,12 @@
 
 .home {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 40px 24px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 36px 28px;
   text-align: center;
-  background: #1e1e1e;
-  border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(2,6,23,0.6);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,12 +15,12 @@
 
 
 .home-title {
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #6366f1;
+  margin-bottom: 24px;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--fg);
   letter-spacing: -0.02em;
-  text-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+  text-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 
@@ -35,22 +35,22 @@
 
 
 .game-card {
-  padding: 24px 16px;
-  border-radius: 16px;
-  background: #374151;
-  color: #f9fafb;
-  border: 2px solid transparent;
+  padding: 18px 16px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+  color: var(--fg);
+  border: 1px solid rgba(255,255,255,0.03);
   cursor: pointer;
-  font-weight: 500;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 1.05rem;
   text-align: center;
-  transition: all 0.2s ease;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
   outline: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100px;
+  min-height: 104px;
   position: relative;
   overflow: hidden;
 }
@@ -63,11 +63,11 @@
 
 
 .game-card.selected {
-  background: #6366f1;
-  color: #ffffff;
-  border-color: #4f46e5;
-  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
-  transform: translateY(-4px);
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
+  color: #061018;
+  border-color: rgba(255,255,255,0.02);
+  box-shadow: 0 18px 48px rgba(124,92,255,0.16);
+  transform: translateY(-6px) scale(1.02);
 }
 
 
@@ -75,7 +75,7 @@
   font-size: 1.2rem;
   padding: 16px 40px;
   border-radius: 12px;
-  background: #6366f1;
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
   color: #ffffff;
   border: none;
   cursor: pointer;
@@ -100,9 +100,9 @@
 
 @media (max-width: 768px) {
   .home {
-    margin: 16px;
-    padding: 24px 16px;
-    border-radius: 20px;
+    margin: 12px;
+    padding: 18px 14px;
+    border-radius: 14px;
   }
   .home-title {
     font-size: 2rem;
@@ -122,6 +122,23 @@
     font-size: 1.1rem;
     padding: 14px 32px;
   }
+}
+/* Card icon + meta */
+.card-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.35));
+}
+
+.card-label {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.card-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 6px;
 }
 @keyframes fadeIn {
   from {

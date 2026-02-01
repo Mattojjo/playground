@@ -76,3 +76,20 @@
     transform: translateX(5px);
   }
 }
+
+@keyframes neonPulse {
+  0% { box-shadow: 0 0 0px rgba(124,92,255,0.08); }
+  50% { box-shadow: 0 12px 40px rgba(124,92,255,0.14); }
+  100% { box-shadow: 0 0 0px rgba(124,92,255,0.08); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.02) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2.6s linear infinite;
+}
