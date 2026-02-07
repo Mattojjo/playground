@@ -1,8 +1,6 @@
-
 import React, { useState } from 'react';
 import wrongImg from '../img/wrong.jpeg';
 
-// GameBoard displays the current question, input for answers, and revealed answers
 const GameBoard = ({ question, answers, revealedAnswers, onAnswerSubmit }) => {
   const [input, setInput] = useState('');
   const [feedback, setFeedback] = useState('');

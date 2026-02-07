@@ -1,16 +1,13 @@
-
 import React, { useState } from 'react';
 import questions from './questions';
 import HomeButton from '../../components/HomeButton';
 import './SpicyCouple.css';
 
-// SpicyCouple game component
 const SpicyCouple = ({ onGoHome }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [showDare, setShowDare] = useState(false);
   const { question, dare } = questions[currentIdx];
 
-  // Handle next question
   const handleNext = () => {
     setShowDare(false);
     if (currentIdx < questions.length - 1) {

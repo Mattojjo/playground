@@ -1,7 +1,5 @@
-
 import React from 'react';
 
-// ScoreBoard displays the scores for each team
 const ScoreBoard = ({ teamScores, teams }) => (
   <div className="score-board">
     <h3 className="score-board-title" style={ { fontSize: '1.7em' } }>Scores</h3>

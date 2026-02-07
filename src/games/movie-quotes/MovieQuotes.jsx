@@ -113,7 +113,7 @@ const MovieQuotes = ({ onGoHome }) => {
             ? "Correct!"
             : selectedOption === null
               ? "Time's up!"
-              : `Wrong! The correct answer was "${question.answer}".`}
+              : `Wrong! The correct answer was "${question.answer}."`}
           <button className="mq-next-btn" onClick={handleNext}>
             Next
           </button>

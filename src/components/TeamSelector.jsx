@@ -1,7 +1,5 @@
-
 import React from 'react';
 
-// TeamSelector displays the current team and allows switching to the next team
 const TeamSelector = ({ teams, currentTeam, onNextTeam }) => (
   <div className="team-selector">
     <h4 className="team-selector-title">

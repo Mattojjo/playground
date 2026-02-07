@@ -1,9 +1,7 @@
-
 import React, { useState } from 'react';
 import './Home.css';
 import { GAME_TYPES } from '../constants/gameConstants';
 
-// List of available games with icons
 const gameOptions = [
   { key: GAME_TYPES.FAMILY_FEUD, label: 'Family Feud', icon: '🧑‍👩‍👧‍👦' },
   { key: GAME_TYPES.WOULD_YOU_RATHER, label: 'Would You Rather', icon: '🤔' },
@@ -13,16 +11,13 @@ const gameOptions = [
   { key: GAME_TYPES.MOVIE_QUOTES, label: 'Movie Quotes', icon: '🎬' },
 ];
 
-// Home page for selecting a game
 const Home = ({ onStart }) => {
   const [selectedGame, setSelectedGame] = useState(gameOptions[0].key);
 
-  // Handle game card click
   const handleCardClick = (key) => {
     setSelectedGame(key);
   };
 
-  // Handle start button click
   const handleStart = () => {
     onStart(selectedGame);
   };

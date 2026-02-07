@@ -2,21 +2,12 @@
  * Utility functions for string matching and validation
  */
 
-/**
- * Fuzzy match function: returns true if two strings are similar enough
- * Uses Levenshtein distance algorithm to allow for minor misspellings
- * @param {string} input - The input string to match
- * @param {string} answer - The target string to match against
- * @param {number} maxDistance - Maximum allowed edit distance (default: 3)
- * @returns {boolean} - True if strings are similar enough
- */
 export function fuzzyMatch(input, answer, maxDistance = 3) {
   const a = input.trim().toLowerCase();
   const b = answer.trim().toLowerCase();
   
   if (a === b) return true;
   
-  // Calculate Levenshtein distance
   function levenshtein(s, t) {
     const d = [];
     for (let i = 0; i <= s.length; i++) d[i] = [i];
@@ -37,11 +28,6 @@ export function fuzzyMatch(input, answer, maxDistance = 3) {
   return levenshtein(a, b) <= maxDistance;
 }
 
-/**
- * Shuffle an array using Fisher-Yates algorithm
- * @param {Array} array - Array to shuffle
- * @returns {Array} - New shuffled array
- */
 export function shuffleArray(array) {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -51,12 +37,6 @@ export function shuffleArray(array) {
   return shuffled;
 }
 
-/**
- * Get a random subset of items from an array
- * @param {Array} array - Source array
- * @param {number} count - Number of items to select
- * @returns {Array} - Random subset
- */
 export function getRandomSubset(array, count) {
   return shuffleArray(array).slice(0, count);
 }

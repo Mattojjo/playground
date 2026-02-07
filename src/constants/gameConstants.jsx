@@ -1,7 +1,3 @@
-/**
- * Common constants used across game components
- */
-
 // Game types
 export const GAME_TYPES = {
   FAMILY_FEUD: 'familyFeud',
@@ -12,10 +8,9 @@ export const GAME_TYPES = {
   MOVIE_QUOTES: 'movieQuotes'
 };
 
-// Game configurations
 export const GAME_CONFIG = {
   [GAME_TYPES.MOVIE_QUOTES]: {
-    timeLimit: 15, // seconds
+    timeLimit: 15,
     maxQuestions: 20
   },
   [GAME_TYPES.WOULD_YOU_RATHER]: {
@@ -27,20 +22,17 @@ export const GAME_CONFIG = {
   }
 };
 
-// Team configurations
 export const TEAMS = {
   TOTORO: { name: 'Team Totoro', color: '#4f46e5' },
   PONYO: { name: 'Team Ponyo', color: '#06b6d4' }
 };
 
-// UI Constants
 export const UI_CONSTANTS = {
   MOBILE_BREAKPOINT: 768,
   ANIMATION_DURATION: 300,
-  WRONG_IMAGE_DISPLAY_TIME: 1000 // 1 second
+  WRONG_IMAGE_DISPLAY_TIME: 1000
 };
 
-// Color palette
 export const COLORS = {
   primary: '#6366f1',
   secondary: '#374151',

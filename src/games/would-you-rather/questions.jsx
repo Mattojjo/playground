@@ -283,20 +283,6 @@ let wouldYouRatherQuestions = [
         ]
     },
     {
-        question: "Would you rather be able to control your dreams or watch your dreams on TV?",
-        options: [
-            { text: "Control dreams", funFact: "Lucid dreaming is when you know you're dreaming and can control the dream." },
-            { text: "Watch dreams", funFact: "Some people remember their dreams in vivid detail every night." }
-        ]
-    },
-    {
-        question: "Would you rather have a rewind button for your life or a fast-forward button?",
-        options: [
-            { text: "Rewind", funFact: "The first video cassette recorder was invented in 1956." },
-            { text: "Fast-forward", funFact: "Fast-forwarding through commercials became popular with the invention of DVRs." }
-        ]
-    },
-    {
         question: "Would you rather always have to skip breakfast or dinner?",
         options: [
             { text: "Skip breakfast", funFact: "Breakfast is often called the most important meal of the day." },
@@ -332,10 +318,10 @@ let wouldYouRatherQuestions = [
         ]
     },
     {
-        question: "Would you rather be able to visit any country for free or eat at any restaurant for free?",
+        question: "Would you rather have free Wi-Fi wherever you go or free coffee wherever you go?",
         options: [
-            { text: "Visit countries", funFact: "There are 195 countries in the world today." },
-            { text: "Eat at restaurants", funFact: "The oldest restaurant still operating is in Spain, founded in 1725." }
+            { text: "Free Wi-Fi", funFact: "The first Wi-Fi network was created in 1991." },
+            { text: "Free coffee", funFact: "Coffee beans are actually seeds from the coffee cherry." }
         ]
     }
 ];
