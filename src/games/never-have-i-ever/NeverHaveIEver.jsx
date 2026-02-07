@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import questions from "./questions";
 import HomeButton from "../../components/HomeButton";
-import "./NeverHaveIEver.css";
 
 // NeverHaveIEver game component
 const NeverHaveIEver = ({ onGoHome }) => {
@@ -25,30 +24,30 @@ const NeverHaveIEver = ({ onGoHome }) => {
   };
 
   return (
-    <div className="nhie-mobile-container">
+    <div className="max-w-2xl mx-auto p-6 bg-slate-800 rounded-lg">
       <HomeButton onGoHome={onGoHome} />
-      <h2 className="nhie-title">Never Have I Ever</h2>
-      <div className="nhie-question">{question}</div>
+      <h2 className="text-2xl font-bold mb-4 text-indigo-400">Never Have I Ever</h2>
+      <div className="text-xl mb-6">{question}</div>
       {!showNext ? (
-        <div className="nhie-btn-group">
-          <button className="nhie-btn" onClick={() => handleAnswer(true)}>
+        <div className="flex gap-4">
+          <button className="flex-1 py-3 px-6 rounded-lg bg-slate-700 hover:bg-slate-600 font-medium" onClick={() => handleAnswer(true)}>
             I Have
           </button>
-          <button className="nhie-btn" onClick={() => handleAnswer(false)}>
+          <button className="flex-1 py-3 px-6 rounded-lg bg-slate-700 hover:bg-slate-600 font-medium" onClick={() => handleAnswer(false)}>
             Never
           </button>
         </div>
       ) : (
-        <button className="nhie-next-btn" onClick={handleNext}>Next</button>
+        <button className="w-full py-2 px-4 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700" onClick={handleNext}>Next</button>
       )}
       {currentIdx === questions.length - 1 && answers.length === questions.length && (
-        <div className="nhie-summary">
-          <h3>Your Answers:</h3>
-          <ul className="nhie-summary-list">
+        <div className="mt-4 p-4 bg-slate-700 rounded-lg">
+          <h3 className="text-lg font-bold mb-2">Your Answers:</h3>
+          <ul className="space-y-2">
             {answers.map((a, idx) => (
-              <li key={idx} className="nhie-summary-item">
+              <li key={idx} className="p-2 bg-slate-600 rounded text-left">
                 <strong>{a.question}</strong><br />
-                <span className={a.haveDone ? "nhie-have" : "nhie-never"}>
+                <span className={a.haveDone ? 'text-green-400' : 'text-yellow-400'}>
                   {a.haveDone ? "I Have" : "Never"}
                 </span>
               </li>

@@ -8,8 +8,6 @@ import NeverHaveIEver from './games/never-have-i-ever/NeverHaveIEver';
 import MovieQuotes from './games/movie-quotes/MovieQuotes';
 import { GAME_TYPES } from './constants/gameConstants';
 import HomeButton from './components/HomeButton';
-import './App.css';
-import './styles/animations.css';
 
 function App() {
   const [started, setStarted] = useState(false);
@@ -26,15 +24,9 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="site-header">
-        <div className="site-brand">
-          <svg className="brand-mark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-            <rect x="2" y="6" width="20" height="12" rx="3" fill="currentColor" opacity="0.12" />
-            <path d="M6 10h12v4H6z" fill="currentColor" />
-          </svg>
-          <h1 className="site-title">PartyPlay</h1>
-        </div>
+    <div className="min-h-screen p-4 text-center">
+      <header className="bg-slate-800 rounded-lg p-4 mb-6">
+        <h1 className="text-2xl font-bold text-white">🎮 PartyPlay</h1>
       </header>
 
       {!started ? (

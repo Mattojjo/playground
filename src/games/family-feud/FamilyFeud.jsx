@@ -77,88 +77,30 @@ const FamilyFeud = ({ onGoHome }) => {
   };
 
   return (
-    <div className="game" style={{
-      maxWidth: '480px',
-      margin: '48px auto',
-      background: '#fff',
-      borderRadius: '18px',
-      boxShadow: '0 2px 24px rgba(0,0,0,0.08)',
-      padding: '40px 28px',
-      position: 'relative',
-      fontFamily: 'Inter, Arial, sans-serif',
-      letterSpacing: '0.01em',
-    }}>
+    <div className="max-w-2xl mx-auto my-6 bg-white text-gray-900 rounded-lg p-6">
       <HomeButton onGoHome={onGoHome} />
       {showCoinFlip && (
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          background: 'linear-gradient(135deg, #f8fafc 60%, #e0e7ef 100%)',
-          zIndex: 10,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'flex-start',
-          boxShadow: '0 0 0 100vmax rgba(255,255,255,0.92)',
-          animation: 'fadeIn 0.7s',
-          paddingTop: '56px',
-        }}>
-          <div style={{
-            fontSize: '2rem',
-            marginBottom: '28px',
-            color: '#222',
-            fontWeight: 600,
-            textShadow: 'none',
-            letterSpacing: '0.01em',
-            textAlign: 'center',
-            maxWidth: '90%',
-            lineHeight: '1.3',
-            wordBreak: 'break-word',
-          }}>
-            Flip a coin to see which team starts!
-          </div>
-          <div style={{ display: 'flex', gap: '32px', marginBottom: '32px' }}>
+        <div className="bg-gray-100 p-8 rounded-lg">
+          <h2 className="text-2xl font-bold mb-6 text-center">Flip a coin to see which team starts!</h2>
+          <div className="flex gap-4 mb-6 justify-center">
             <button
               onClick={() => setSelectedSide(0)}
-              style={{
-                fontSize: '1.3rem',
-                padding: '14px 24px',
-                borderRadius: '12px',
-                background: selectedSide === 0 ? '#e0e7ef' : '#fff',
-                color: '#222',
-                border: selectedSide === 0 ? '2px solid #a3bffa' : '2px solid #e0e7ef',
-                cursor: 'pointer',
-                boxShadow: selectedSide === 0 ? '0 2px 12px rgba(163,191,250,0.10)' : 'none',
-                fontWeight: 500,
-                transition: 'background 0.2s',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '16px',
-              }}
+              className={`px-6 py-3 rounded-lg font-medium flex items-center gap-3 ${
+                selectedSide === 0 
+                  ? 'bg-blue-200 border-2 border-blue-400' 
+                  : 'bg-white border-2 border-gray-300'
+              }`}
             >
               <img src={totoroImg} alt="Totoro" width="32" height="32" />
               {teams[0].name}
             </button>
             <button
               onClick={() => setSelectedSide(1)}
-              style={{
-                fontSize: '1.3rem',
-                padding: '14px 24px',
-                borderRadius: '12px',
-                background: selectedSide === 1 ? '#e0e7ef' : '#fff',
-                color: '#222',
-                border: selectedSide === 1 ? '2px solid #faaca8' : '2px solid #e0e7ef',
-                cursor: 'pointer',
-                boxShadow: selectedSide === 1 ? '0 2px 12px rgba(250,172,168,0.10)' : 'none',
-                fontWeight: 500,
-                transition: 'background 0.2s',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '16px',
-              }}
+              className={`px-6 py-3 rounded-lg font-medium flex items-center gap-3 ${
+                selectedSide === 1 
+                  ? 'bg-red-200 border-2 border-red-400' 
+                  : 'bg-white border-2 border-gray-300'
+              }`}
             >
               <img src={ponyoImg} alt="Ponyo" width="32" height="32" />
               {teams[1].name}
@@ -166,92 +108,57 @@ const FamilyFeud = ({ onGoHome }) => {
           </div>
           <button
             onClick={flipCoin}
-            style={{
-              fontSize: '1.1rem',
-              padding: '14px 32px',
-              borderRadius: '24px',
-              background: selectedSide !== null && coinResult === null ? 'linear-gradient(90deg, #a3bffa 0%, #faaca8 100%)' : '#e0e7ef',
-              color: selectedSide !== null && coinResult === null ? '#fff' : '#aaa',
-              border: 'none',
-              cursor: selectedSide !== null && coinResult === null ? 'pointer' : 'not-allowed',
-              boxShadow: selectedSide !== null && coinResult === null ? '0 2px 12px #a3bffa33' : 'none',
-              marginBottom: '28px',
-              fontWeight: 600,
-              transition: 'background 0.2s',
-              letterSpacing: '0.02em',
-            }}
+            className={`w-full py-3 rounded-lg font-semibold ${
+              selectedSide !== null && coinResult === null
+                ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+                : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+            }`}
             disabled={selectedSide === null || coinResult !== null}
           >
             🪙 Flip Coin
           </button>
           {coinResult !== null && (
-            <div style={{ fontSize: '2rem', marginTop: '18px', color: '#222', fontWeight: 600, animation: 'popIn 0.7s', display: 'flex', alignItems: 'center', gap: '18px' }}>
-              <img src={teams[coinResult].icon} alt={teams[coinResult].name} width="32" height="32" />
-              {teams[coinResult].name} starts!
-              <div style={{ fontSize: '1rem', marginTop: '8px', color: '#555', fontWeight: 400 }}>
-                {selectedSide === coinResult ? 'Your team goes first!' : 'Opponent team goes first!'}
+            <div className="mt-6 text-center">
+              <div className="flex items-center gap-3 justify-center text-2xl font-bold">
+                <img src={teams[coinResult].icon} alt={teams[coinResult].name} width="32" height="32" />
+                {teams[coinResult].name} starts!
               </div>
+              <p className="mt-2 text-gray-600">
+                {selectedSide === coinResult ? 'Your team goes first!' : 'Opponent team goes first!'}
+              </p>
             </div>
           )}
-          {/* Keyframes moved to FamilyFeud.css */}
         </div>
       )}
       {!showCoinFlip && (
         <>
-          <div style={{ marginBottom: '20px' }}>
-            <ScoreBoard teamScores={teamScores} teams={teams} />
-          </div>
-          <div style={{ marginBottom: '20px' }}>
-            <TeamSelector teams={teams} currentTeam={currentTeam} onNextTeam={handleNextTeam} />
-          </div>
-          <div style={{ marginBottom: '20px' }}>
-            <GameBoard
-              question={question}
-              answers={answers}
-              revealedAnswers={revealedAnswers}
-              onAnswerSubmit={handleAnswerSubmit}
-            />
-          </div>
+          <ScoreBoard teamScores={teamScores} teams={teams} />
+          <TeamSelector teams={teams} currentTeam={currentTeam} onNextTeam={handleNextTeam} />
+          <GameBoard
+            question={question}
+            answers={answers}
+            revealedAnswers={revealedAnswers}
+            onAnswerSubmit={handleAnswerSubmit}
+          />
           {revealedAnswers.length === answers.length && currentQuestionIdx < questions.length - 1 && (
-            <button onClick={handleNextQuestion}>
+            <button className="w-full py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700" onClick={handleNextQuestion}>
               Next Question
             </button>
           )}
-          {/* Skip Round button, shown if question is not fully revealed */}
           {revealedAnswers.length < answers.length && (
             <button onClick={() => {
-              // Reveal all answers before skipping
               setRevealedAnswers(answers.map((_, idx) => idx));
-              setTimeout(() => {
-                handleNextQuestion();
-              }, 3200);
-            }} style={{ marginTop: '12px' }}>
+              setTimeout(() => handleNextQuestion(), 3200);
+            }} className="w-full mt-2 py-3 bg-gray-500 text-white rounded-lg font-medium hover:bg-gray-600">
               Skip Round
             </button>
           )}
           {currentQuestionIdx === questions.length - 1 && revealedAnswers.length === answers.length && (
-            <div style={{
-              marginTop: '24px',
-              padding: '18px',
-              background: '#e0e7ef',
-              borderRadius: '10px',
-              color: '#222',
-              fontWeight: 600,
-              fontSize: '1.2rem',
-              boxShadow: '0 2px 8px #a3bffa22',
-              textAlign: 'center',
-            }}>
+            <div className="mt-4 p-4 bg-green-100 rounded-lg text-green-900 font-bold text-center">
               Game Over! Winner: {teamScores[0] > teamScores[1] ? teams[0].name : teams[1].name}
             </div>
           )}
-          <div style={{
-            position: 'absolute',
-            top: '12px',
-            right: '20px',
-            fontSize: '0.95rem',
-            color: '#bbb',
-            fontWeight: 400,
-          }}>
+          <div className="text-right text-sm text-gray-500 mt-2">
             Question {currentQuestionIdx + 1} / {questions.length}
           </div>
         </>

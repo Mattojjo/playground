@@ -1,21 +1,16 @@
 import React from 'react';
 
 const ScoreBoard = ({ teamScores, teams }) => (
-  <div className="score-board">
-    <h3 className="score-board-title" style={ { fontSize: '1.7em' } }>Scores</h3>
-    <div className="score-board-list">
+  <div className="bg-slate-700 rounded-lg p-4 mb-4">
+    <h3 className="text-xl font-bold mb-2">Scores</h3>
+    <div className="flex gap-4 justify-center">
       {teamScores.map((score, idx) => (
-        <span key={idx} className="score-board-team">
+        <div key={idx} className="flex items-center gap-2">
           {teams[idx].icon && (
-            <img
-              src={teams[idx].icon}
-              alt={teams[idx].name}
-              className="score-board-icon"
-              style={ { width: '32px', height: '32px' } }
-            />
+            <img src={teams[idx].icon} alt={teams[idx].name} className="w-8 h-8" />
           )}
-          {teams[idx].name}: {score}
-        </span>
+          <span className="font-semibold">{teams[idx].name}: {score}</span>
+        </div>
       ))}
     </div>
   </div>

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import questions from "./questions";
 import HomeButton from "../../components/HomeButton";
-import "./TruthOrDare.css";
 
 // TruthOrDare game component
 const TruthOrDare = ({ onGoHome }) => {
@@ -27,18 +26,18 @@ const TruthOrDare = ({ onGoHome }) => {
   const question = filteredQuestions[currentIdx % filteredQuestions.length];
 
   return (
-    <div className="tod-mobile-container">
+    <div className="max-w-2xl mx-auto p-6 bg-slate-800 rounded-lg">
       <HomeButton onGoHome={onGoHome} />
-      <h2 className="tod-title">Truth or Dare</h2>
+      <h2 className="text-2xl font-bold mb-6 text-indigo-400">Truth or Dare</h2>
       {!showAnswer ? (
-        <div className="tod-type-select">
-          <button className="tod-btn" onClick={() => handleTypeSelect("truth")}>Truth</button>
-          <button className="tod-btn" onClick={() => handleTypeSelect("dare")}>Dare</button>
+        <div className="flex gap-4">
+          <button className="flex-1 py-4 px-6 rounded-lg bg-slate-700 hover:bg-slate-600 font-medium" onClick={() => handleTypeSelect("truth")}>Truth</button>
+          <button className="flex-1 py-4 px-6 rounded-lg bg-slate-700 hover:bg-slate-600 font-medium" onClick={() => handleTypeSelect("dare")}>Dare</button>
         </div>
       ) : (
-        <div className="tod-question-section">
-          <div className="tod-question">{question.text}</div>
-          <button className="tod-next-btn" onClick={handleNext}>Next</button>
+        <div>
+          <div className="text-lg mb-4 p-4 bg-indigo-900 rounded-lg border border-indigo-700">{question.text}</div>
+          <button className="w-full py-2 px-4 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700" onClick={handleNext}>Next</button>
         </div>
       )}
     </div>

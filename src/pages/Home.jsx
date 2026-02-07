@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Home.css';
 import { GAME_TYPES } from '../constants/gameConstants';
 
 const gameOptions = [
@@ -23,26 +22,26 @@ const Home = ({ onStart }) => {
   };
 
   return (
-    <div className="home">
-      <h1 className="home-title">Choose Your Game</h1>
-      <div className="game-card-list">
+    <div className="max-w-2xl mx-auto p-6 bg-slate-800 rounded-lg">
+      <h1 className="mb-6 text-3xl font-bold text-white">Choose Your Game</h1>
+      <div className="grid grid-cols-2 gap-4 mb-6">
         {gameOptions.map(opt => (
-          <div
+          <button
             key={opt.key}
-            className={`game-card${selectedGame === opt.key ? ' selected' : ''}`}
+            className={`p-6 rounded-lg font-semibold text-center transition-all ${
+              selectedGame === opt.key 
+                ? 'bg-indigo-600 text-white scale-105' 
+                : 'bg-slate-700 text-gray-200 hover:bg-slate-600'
+            }`}
             onClick={() => handleCardClick(opt.key)}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => { if (e.key === 'Enter') handleCardClick(opt.key); }}
           >
-            <div className="card-icon" aria-hidden>{opt.icon}</div>
-            <div className="card-label">{opt.label}</div>
-            <div className="card-meta">Tap to select — fun for groups</div>
-          </div>
+            <div className="text-4xl mb-2">{opt.icon}</div>
+            <div>{opt.label}</div>
+          </button>
         ))}
       </div>
       <button
-        className="home-start-btn"
+        className="w-full py-3 px-6 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 disabled:bg-gray-600 disabled:cursor-not-allowed"
         onClick={handleStart}
         disabled={!selectedGame}
       >

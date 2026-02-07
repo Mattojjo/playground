@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import questions from "./questions";
-import "./MovieQuotes.css";
 import wrongImg from "../../img/wrong.jpeg";
 import HomeButton from "../../components/HomeButton";
 import { shuffleArray } from "../../utils/gameUtils";
@@ -70,12 +69,14 @@ const MovieQuotes = ({ onGoHome }) => {
 
   if (currentIdx >= questions.length) {
     return (
-      <div className="mq-mobile-container">
-        <h2 className="mq-title">Movie Quotes</h2>
-        <div className="mq-score">Your Score: {score} / {questions.length}</div>
-        <ul className="mq-answers">
+      <div className="max-w-2xl mx-auto p-6 bg-slate-800 rounded-lg">
+        <h2 className="text-2xl font-bold mb-4 text-indigo-400">Movie Quotes</h2>
+        <div className="text-3xl font-bold text-green-400 mb-4">Your Score: {score} / {questions.length}</div>
+        <ul className="space-y-2">
           {answers.map((a, idx) => (
-            <li key={idx} className={a.correct ? "mq-correct" : a.timedOut ? "mq-timedout" : "mq-wrong"}>
+            <li key={idx} className={`p-3 rounded-lg font-medium ${
+              a.correct ? 'bg-green-900 text-green-300' : a.timedOut ? 'bg-yellow-900 text-yellow-300' : 'bg-red-900 text-red-300'
+            }`}>
               {a.correct ? "Correct" : a.timedOut ? "Timed Out" : "Wrong"}
             </li>
           ))}
@@ -85,21 +86,25 @@ const MovieQuotes = ({ onGoHome }) => {
   }
 
   return (
-    <div className="mq-mobile-container">
+    <div className="max-w-2xl mx-auto p-6 bg-slate-800 rounded-lg">
       <HomeButton onGoHome={onGoHome} />
       {showWrongImage && (
-        <div className="wrong-overlay">
-          <img src={wrongImg} alt="Wrong Answer" className="wrong-image" />
+        <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
+          <img src={wrongImg} alt="Wrong Answer" className="max-w-xs rounded-lg" />
         </div>
       )}
-      <h2 className="mq-title">Movie Quotes</h2>
-      <div className="mq-timer">Time Left: {timer}s</div>
-      <div className="mq-quote">"{question.quote}"</div>
-      <div className="mq-options">
+      <h2 className="text-2xl font-bold mb-4 text-indigo-400">Movie Quotes</h2>
+      <div className="text-lg text-green-400 mb-4 font-medium">Time Left: {timer}s</div>
+      <div className="text-xl mb-6 p-4 bg-slate-700 rounded-lg border-l-4 border-indigo-500 italic">"{question.quote}"</div>
+      <div className="grid grid-cols-2 gap-3 mb-4">
         {shuffledOptions.map(opt => (
           <button
             key={opt}
-            className={`mq-option-btn${selectedOption === opt ? " selected" : ""}`}
+            className={`py-3 px-4 rounded-lg font-medium ${
+              selectedOption === opt 
+                ? 'bg-indigo-600 text-white' 
+                : 'bg-slate-700 hover:bg-slate-600'
+            }`}
             onClick={() => handleOptionClick(opt)}
             disabled={showResult || showWrongImage}
           >
@@ -108,13 +113,15 @@ const MovieQuotes = ({ onGoHome }) => {
         ))}
       </div>
       {showResult && (
-        <div className="mq-result">
-          {selectedOption === question.answer
-            ? "Correct!"
-            : selectedOption === null
-              ? "Time's up!"
-              : `Wrong! The correct answer was "${question.answer}."`}
-          <button className="mq-next-btn" onClick={handleNext}>
+        <div className="p-4 rounded-lg bg-indigo-900 border border-indigo-700">
+          <p className="mb-4">
+            {selectedOption === question.answer
+              ? "Correct!"
+              : selectedOption === null
+                ? "Time's up!"
+                : `Wrong! The correct answer was "${question.answer}."`}
+          </p>
+          <button className="w-full py-2 px-4 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700" onClick={handleNext}>
             Next
           </button>
         </div>
