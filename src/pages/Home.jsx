@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
+import { Trophy, Scale, Flame, Target, Eye, Film } from 'lucide-react';
 import { GAME_TYPES } from '../constants/gameConstants';
 
 const gameOptions = [
-  { key: GAME_TYPES.FAMILY_FEUD, label: 'Family Feud', icon: '🧑‍👩‍👧‍👦' },
-  { key: GAME_TYPES.WOULD_YOU_RATHER, label: 'Would You Rather', icon: '🤔' },
-  { key: GAME_TYPES.SPICY_COUPLE, label: 'Spicy Couple', icon: '🌶️' },
-  { key: GAME_TYPES.TRUTH_OR_DARE, label: 'Truth or Dare', icon: '🎲' },
-  { key: GAME_TYPES.NEVER_HAVE_I_EVER, label: 'Never Have I Ever', icon: '🙊' },
-  { key: GAME_TYPES.MOVIE_QUOTES, label: 'Movie Quotes', icon: '🎬' },
+  { key: GAME_TYPES.FAMILY_FEUD, label: 'Family Feud', icon: <Trophy className="w-12 h-12" /> },
+  { key: GAME_TYPES.WOULD_YOU_RATHER, label: 'Would You Rather', icon: <Scale className="w-12 h-12" /> },
+  { key: GAME_TYPES.SPICY_COUPLE, label: 'Spicy Couple', icon: <Flame className="w-12 h-12" /> },
+  { key: GAME_TYPES.TRUTH_OR_DARE, label: 'Truth or Dare', icon: <Target className="w-12 h-12" /> },
+  { key: GAME_TYPES.NEVER_HAVE_I_EVER, label: 'Never Have I Ever', icon: <Eye className="w-12 h-12" /> },
+  { key: GAME_TYPES.MOVIE_QUOTES, label: 'Movie Quotes', icon: <Film className="w-12 h-12" /> },
 ];
 
 const Home = ({ onStart }) => {
@@ -35,7 +36,7 @@ const Home = ({ onStart }) => {
             }`}
             onClick={() => handleCardClick(opt.key)}
           >
-            <div className="text-4xl mb-2">{opt.icon}</div>
+            <div className="mb-3 flex justify-center">{opt.icon}</div>
             <div>{opt.label}</div>
           </button>
         ))}

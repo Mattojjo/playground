@@ -22,7 +22,7 @@ const GameBoard = ({ question, answers, revealedAnswers, onAnswerSubmit }) => {
   };
 
   return (
-    <div className="bg-slate-800 rounded-lg p-6 mb-4">
+    <div className="bg-slate-800 rounded-4xl p-6 mb-4">
       {showWrongImage && (
         <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
           <div className="text-9xl text-red-500 animate-pulse">❌</div>

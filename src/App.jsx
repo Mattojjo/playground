@@ -24,9 +24,9 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen p-4 text-center">
-      <header className="bg-slate-800 rounded-lg p-4 mb-6">
-        <h1 className="text-2xl font-bold text-white">🎮 PartyPlay</h1>
+    <div className="min-h-screen p-8 text-center">
+      <header className="bg-slate-800 rounded-lg p-8 mb-8">
+        <h1 className="text-3xl font-bold text-white">PlayGround</h1>
       </header>
 
       {!started ? (

@@ -5,6 +5,7 @@ import TeamSelector from '../../components/TeamSelector';
 import GameBoard from '../../components/GameBoard';
 import HomeButton from '../../components/HomeButton';
 import { fuzzyMatch } from '../../utils/gameUtils';
+import { Coins } from 'lucide-react';
 import totoroImg from '../../img/totoro.png';
 import ponyoImg from '../../img/ponyo.png';
 
@@ -106,14 +107,15 @@ const FamilyFeud = ({ onGoHome }) => {
           </div>
           <button
             onClick={flipCoin}
-            className={`w-full py-3 rounded-lg font-semibold ${
+            className={`w-full py-3 rounded-lg font-semibold flex items-center justify-center gap-2 ${
               selectedSide !== null && coinResult === null
                 ? 'bg-indigo-600 text-white hover:bg-indigo-700'
                 : 'bg-gray-300 text-gray-500 cursor-not-allowed'
             }`}
             disabled={selectedSide === null || coinResult !== null}
           >
-            🪙 Flip Coin
+            <Coins className="w-5 h-5" />
+            Flip Coin
           </button>
           {coinResult !== null && (
             <div className="mt-6 text-center">
