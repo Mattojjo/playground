@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import questions from "./questions";
-import wrongImg from "../../img/wrong.jpeg";
 import HomeButton from "../../components/HomeButton";
 import { shuffleArray } from "../../utils/gameUtils";
 import { GAME_CONFIG, GAME_TYPES, UI_CONSTANTS } from "../../constants/gameConstants";
@@ -84,7 +83,7 @@ const MovieQuotes = ({ onGoHome }) => {
       <HomeButton onGoHome={onGoHome} />
       {showWrongImage && (
         <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-          <img src={wrongImg} alt="Wrong Answer" className="max-w-xs rounded-lg" />
+          <div className="text-9xl text-red-500 animate-pulse">❌</div>
         </div>
       )}
       <h2 className="text-2xl font-bold mb-4 text-indigo-400">Movie Quotes</h2>

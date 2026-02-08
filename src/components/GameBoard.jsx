@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import wrongImg from '../img/wrong.jpeg';
 
 const GameBoard = ({ question, answers, revealedAnswers, onAnswerSubmit }) => {
   const [input, setInput] = useState('');
@@ -26,7 +25,7 @@ const GameBoard = ({ question, answers, revealedAnswers, onAnswerSubmit }) => {
     <div className="bg-slate-800 rounded-lg p-6 mb-4">
       {showWrongImage && (
         <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-          <img src={wrongImg} alt="Wrong Answer" className="max-w-xs rounded-lg" />
+          <div className="text-9xl text-red-500 animate-pulse">❌</div>
         </div>
       )}
       <h2 className="mb-4 text-xl font-bold text-indigo-400">{question}</h2>
