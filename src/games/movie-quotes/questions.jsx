@@ -1,3 +1,5 @@
+import { getRandomSubset } from '../../utils/gameUtils';
+
 const movieQuoteQuestions = [
     {
         quote: "To infinity and beyond!",
@@ -381,7 +383,4 @@ const movieQuoteQuestions = [
     }
 ];
 
-// Limit to 10 random questions per round
-const limitedQuestions = movieQuoteQuestions.sort(() => Math.random() - 0.5).slice(0, 10);
-
-export default limitedQuestions;
+export default getRandomSubset(movieQuoteQuestions, 10);

@@ -2,20 +2,17 @@ import React, { useState } from "react";
 import questions from "./questions";
 import HomeButton from "../../components/HomeButton";
 
-// NeverHaveIEver game component
 const NeverHaveIEver = ({ onGoHome }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState([]);
   const question = questions[currentIdx];
   const [showNext, setShowNext] = useState(false);
 
-  // Handle answer selection
   const handleAnswer = (haveDone) => {
     setAnswers([...answers, { question, haveDone }]);
     setShowNext(true);
   };
 
-  // Handle next question
   const handleNext = () => {
     setShowNext(false);
     if (currentIdx < questions.length - 1) {

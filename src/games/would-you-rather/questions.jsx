@@ -1,4 +1,3 @@
-// Import utility function for cleaner shuffling
 import { getRandomSubset } from '../../utils/gameUtils';
 
 let wouldYouRatherQuestions = [
@@ -326,5 +325,4 @@ let wouldYouRatherQuestions = [
     }
 ];
 
-// Use utility function to get 20 random questions per round
 export default getRandomSubset(wouldYouRatherQuestions, 20);

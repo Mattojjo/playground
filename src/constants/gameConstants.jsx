@@ -1,4 +1,3 @@
-// Game types
 export const GAME_TYPES = {
   FAMILY_FEUD: 'familyFeud',
   WOULD_YOU_RATHER: 'wouldYouRather',

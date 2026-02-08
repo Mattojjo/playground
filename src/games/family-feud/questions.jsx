@@ -26,7 +26,6 @@ let questions = [
     { question: "Name a type of cheese.", answers: [ { text: "Cheddar", points: 25 }, { text: "Mozzarella", points: 20 }, { text: "Swiss", points: 20 }, { text: "Parmesan", points: 15 }, { text: "Brie", points: 10 } ] }
 ];
 
-// Shuffle and limit to 20 questions per round
 questions = questions.sort(() => Math.random() - 0.5).slice(0, 10);
 
 export default questions;

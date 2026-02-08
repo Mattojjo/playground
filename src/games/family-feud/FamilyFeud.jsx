@@ -17,7 +17,7 @@ const FamilyFeud = ({ onGoHome }) => {
   const [currentQuestionIdx, setCurrentQuestionIdx] = React.useState(0);
   const [revealedAnswers, setRevealedAnswers] = React.useState([]);
   const [teamScores, setTeamScores] = React.useState([0, 0]);
-  const [currentTeam, setCurrentTeam] = React.useState(null); // null until coin flip
+  const [currentTeam, setCurrentTeam] = React.useState(null);
   const [showCoinFlip, setShowCoinFlip] = React.useState(true);
   const [coinResult, setCoinResult] = React.useState(null);
   const [selectedSide, setSelectedSide] = React.useState(null);
@@ -35,7 +35,6 @@ const FamilyFeud = ({ onGoHome }) => {
   }
   const { question, answers } = currentQuestion;
 
-  // Handle text input answer
   const handleAnswerSubmit = (input) => {
     let foundIdx = -1;
     for (let i = 0; i < answers.length; i++) {
@@ -66,7 +65,6 @@ const FamilyFeud = ({ onGoHome }) => {
     setCurrentTeam(0);
   };
 
-  // Coin flip logic
   const flipCoin = () => {
     const result = Math.random() < 0.5 ? 0 : 1;
     setCoinResult(result);

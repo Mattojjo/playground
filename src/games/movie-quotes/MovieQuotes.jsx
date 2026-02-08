@@ -5,7 +5,6 @@ import HomeButton from "../../components/HomeButton";
 import { shuffleArray } from "../../utils/gameUtils";
 import { GAME_CONFIG, GAME_TYPES, UI_CONSTANTS } from "../../constants/gameConstants";
 
-// MovieQuotes game component
 const MovieQuotes = ({ onGoHome }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -18,14 +17,12 @@ const MovieQuotes = ({ onGoHome }) => {
   const question = questions[currentIdx];
   const [shuffledOptions, setShuffledOptions] = useState([]);
 
-  // Shuffle options when question changes
   useEffect(() => {
     if (question) {
       setShuffledOptions(shuffleArray([...question.options]));
     }
   }, [question]);
 
-  // Timer logic
   useEffect(() => {
     if (!showResult && timer > 0) {
       const interval = setInterval(() => {
@@ -38,13 +35,11 @@ const MovieQuotes = ({ onGoHome }) => {
     }
   }, [timer, showResult, answers]);
 
-  // Handle option selection
   const handleOptionClick = (opt) => {
     setSelectedOption(opt);
     const isCorrect = opt === question.answer;
     
     if (!isCorrect) {
-      // Show wrong image for 1 second
       setShowWrongImage(true);
       setTimeout(() => {
         setShowWrongImage(false);
@@ -58,7 +53,6 @@ const MovieQuotes = ({ onGoHome }) => {
     setAnswers([...answers, { correct: isCorrect, timedOut: false }]);
   };
 
-  // Handle next question
   const handleNext = () => {
     setSelectedOption(null);
     setShowResult(false);

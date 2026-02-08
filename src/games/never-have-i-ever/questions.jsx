@@ -51,7 +51,6 @@ const neverHaveIEverQuestions = [
   "Never have I ever been to a flea market."
 ];
 
-// Limit to 40 random questions per round
 const limitedQuestions = neverHaveIEverQuestions.sort(() => Math.random() - 0.5).slice(0, 20);
 
 export default limitedQuestions;

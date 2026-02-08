@@ -1,4 +1,3 @@
-// Import utility function for cleaner shuffling
 import { getRandomSubset, shuffleArray } from '../../utils/gameUtils';
 
 const truthOrDareQuestions = [
@@ -92,7 +91,6 @@ const truthOrDareQuestions = [
     { type: "truth", text: "Have you ever lied to get out of a responsibility?" }
 ];
 
-// Get 20 random questions of each type and shuffle the final array
 const truths = getRandomSubset(
   truthOrDareQuestions.filter(q => q.type === 'truth'), 
   20

@@ -1,7 +1,3 @@
-/**
- * Utility functions for string matching and validation
- */
-
 export function fuzzyMatch(input, answer, maxDistance = 3) {
   const a = input.trim().toLowerCase();
   const b = answer.trim().toLowerCase();

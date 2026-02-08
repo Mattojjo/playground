@@ -9,7 +9,6 @@ const WouldYouRather = ({ onGoHome }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [showNext, setShowNext] = useState(false);
 
-  // Handle option selection
   const handleSelect = (option) => {
     setSelectedOption(option);
     setAnswers([...answers, { question, answer: option.text, funFact: option.funFact }]);
