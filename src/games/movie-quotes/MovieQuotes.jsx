@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import questions from "./questions";
-import HomeButton from "../../components/HomeButton";
 import { shuffleArray } from "../../utils/gameUtils";
 import { GAME_CONFIG, GAME_TYPES, UI_CONSTANTS } from "../../constants/gameConstants";
 
@@ -80,7 +79,6 @@ const MovieQuotes = ({ onGoHome }) => {
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-slate-800 rounded-lg">
-      <HomeButton onGoHome={onGoHome} />
       {showWrongImage && (
         <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
           <div className="text-9xl text-red-500 animate-pulse">❌</div>

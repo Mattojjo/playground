@@ -3,15 +3,12 @@ import questions from './questions';
 import ScoreBoard from '../../components/ScoreBoard';
 import TeamSelector from '../../components/TeamSelector';
 import GameBoard from '../../components/GameBoard';
-import HomeButton from '../../components/HomeButton';
 import { fuzzyMatch } from '../../utils/gameUtils';
-import { Coins } from 'lucide-react';
-import totoroImg from '../../img/totoro.png';
-import ponyoImg from '../../img/ponyo.png';
+import { Coins, Cat, Fish } from 'lucide-react';
 
 const teams = [
-  { name: 'Team Totoro', icon: totoroImg },
-  { name: 'Team Ponyo', icon: ponyoImg }
+  { name: 'Cats', icon: Cat },
+  { name: 'Fish', icon: Fish }
 ];
 
 const FamilyFeud = ({ onGoHome }) => {
@@ -77,7 +74,6 @@ const FamilyFeud = ({ onGoHome }) => {
 
   return (
     <div className="max-w-2xl mx-auto my-6 bg-white text-gray-900 rounded-lg p-6">
-      <HomeButton onGoHome={onGoHome} />
       {showCoinFlip && (
         <div className="bg-gray-100 p-8 rounded-lg">
           <h2 className="text-2xl font-bold mb-6 text-center">Flip a coin to see which team starts!</h2>
@@ -90,7 +86,7 @@ const FamilyFeud = ({ onGoHome }) => {
                   : 'bg-white border-2 border-gray-300'
               }`}
             >
-              <img src={totoroImg} alt="Totoro" width="32" height="32" />
+              <Cat className="w-8 h-8" />
               {teams[0].name}
             </button>
             <button
@@ -101,7 +97,7 @@ const FamilyFeud = ({ onGoHome }) => {
                   : 'bg-white border-2 border-gray-300'
               }`}
             >
-              <img src={ponyoImg} alt="Ponyo" width="32" height="32" />
+              <Fish className="w-8 h-8" />
               {teams[1].name}
             </button>
           </div>
@@ -117,17 +113,20 @@ const FamilyFeud = ({ onGoHome }) => {
             <Coins className="w-5 h-5" />
             Flip Coin
           </button>
-          {coinResult !== null && (
-            <div className="mt-6 text-center">
-              <div className="flex items-center gap-3 justify-center text-2xl font-bold">
-                <img src={teams[coinResult].icon} alt={teams[coinResult].name} width="32" height="32" />
-                {teams[coinResult].name} starts!
+          {coinResult !== null && (() => {
+            const Icon = teams[coinResult].icon;
+            return (
+              <div className="mt-6 text-center">
+                <div className="flex items-center gap-3 justify-center text-2xl font-bold">
+                  <Icon className="w-8 h-8" />
+                  {teams[coinResult].name} starts!
+                </div>
+                <p className="mt-2 text-gray-600">
+                  {selectedSide === coinResult ? 'Your team goes first!' : 'Opponent team goes first!'}
+                </p>
               </div>
-              <p className="mt-2 text-gray-600">
-                {selectedSide === coinResult ? 'Your team goes first!' : 'Opponent team goes first!'}
-              </p>
-            </div>
-          )}
+            );
+          })()}
         </div>
       )}
       {!showCoinFlip && (

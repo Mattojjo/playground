@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import questions from "./questions";
-import HomeButton from "../../components/HomeButton";
 
 const NeverHaveIEver = ({ onGoHome }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -22,7 +21,6 @@ const NeverHaveIEver = ({ onGoHome }) => {
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-slate-800 rounded-lg">
-      <HomeButton onGoHome={onGoHome} />
       <h2 className="text-2xl font-bold mb-4 text-indigo-400">Never Have I Ever</h2>
       <div className="text-xl mb-6">{question}</div>
       {!showNext ? (

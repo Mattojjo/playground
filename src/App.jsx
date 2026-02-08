@@ -25,15 +25,15 @@ function App() {
 
   return (
     <div className="min-h-screen p-8 text-center">
-      <header className="bg-slate-800 rounded-lg p-8 mb-8">
+      <header className="bg-slate-800 rounded-lg p-8 mb-8 relative">
         <h1 className="text-3xl font-bold text-white">PlayGround</h1>
+        {started && <HomeButton onGoHome={handleGoHome} />}
       </header>
 
       {!started ? (
         <Home onStart={handleStart} />
       ) : (
         <>
-          <HomeButton onGoHome={handleGoHome} />
           {selectedGame === GAME_TYPES.FAMILY_FEUD && <FamilyFeud onGoHome={handleGoHome} />}
           {selectedGame === GAME_TYPES.WOULD_YOU_RATHER && <WouldYouRather onGoHome={handleGoHome} />}
           {selectedGame === GAME_TYPES.SPICY_COUPLE && <SpicyCouple onGoHome={handleGoHome} />}
