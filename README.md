@@ -6,6 +6,9 @@ A modern, responsive React-based collection of interactive party games perfect f
 ![CSS3](https://img.shields.io/badge/CSS3-Modern-green)
 ![Mobile](https://img.shields.io/badge/Mobile-Friendly-orange)
 
+<img width="3168" height="2574" alt="Screenshot 2026-02-10 at 16-10-26 React App (Vite)" src="https://github.com/user-attachments/assets/1d157d79-c586-4592-a501-5eea35dce098" />
+
+
 ## 🎯 Features
 
 - **6 Interactive Games**: Family Feud, Would You Rather, Movie Quotes Quiz, Truth or Dare, Never Have I Ever, and Spicy Couple
