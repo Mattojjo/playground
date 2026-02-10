@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Home from './pages/Home';
 import FamilyFeud from './games/family-feud/FamilyFeud';
 import WouldYouRather from './games/would-you-rather/WouldYouRather';
@@ -42,6 +43,7 @@ function App() {
           {selectedGame === GAME_TYPES.MOVIE_QUOTES && <MovieQuotes onGoHome={handleGoHome} />}
         </>
       )}
+      <Analytics />
     </div>
   );
 }
