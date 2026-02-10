@@ -18,33 +18,39 @@ A modern, responsive React-based collection of interactive party games perfect f
 ## 🎮 Available Games
 
 ### 1. Family Feud
+
 - Team-based guessing game
 - Coin flip team selection
 - Fuzzy matching for answers
 - Score tracking with visual feedback
 
 ### 2. Movie Quotes Quiz
+
 - 15-second timer per question
 - Multiple choice format
 - Wrong answer image feedback
 - Comprehensive movie quote database
 
 ### 3. Would You Rather
+
 - Thought-provoking scenarios
 - Fun facts for each option
 - 20 randomized questions per session
 
 ### 4. Truth or Dare
+
 - Classic party game format
 - Balanced mix of truths and dares
 - Family-friendly content
 
 ### 5. Never Have I Ever
+
 - Interactive statement-based game
 - Answer tracking and summary
 - Perfect for getting to know each other
 
 ### 6. Spicy Couple
+
 - Relationship-focused questions
 - Dare revelations
 - Perfect for date nights
@@ -52,53 +58,73 @@ A modern, responsive React-based collection of interactive party games perfect f
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v14 or higher)
-- npm or yarn
+- pnpm (recommended)
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd playground
 ```
 
 2. Install dependencies:
+
 ```bash
-npm install
+pnpm install
 ```
 
 3. Start the development server:
+
 ```bash
-npm start
-```
+pnpm dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## 🏗️ Project Structure
 
 ```
+
 src/
-├── components/          # Reusable components
-│   ├── GameBoard.js    # Family Feud game board
-│   ├── ScoreBoard.js   # Score display component
-│   └── TeamSelector.js # Team selection component
-├── games/              # Individual game implementations
-│   ├── family-feud/
-│   ├── movie-quotes/
-│   ├── would-you-rather/
-│   ├── truth-or-dare/
-│   ├── never-have-i-ever/
-│   └── spicy-couple/
-├── pages/              # Main page components
-│   └── Home.js         # Game selection page
-├── utils/              # Shared utility functions
-│   └── gameUtils.js    # Game-related utilities
-├── constants/          # Application constants
-│   └── gameConstants.js
-├── styles/             # Shared styles
-│   └── animations.css  # Common animations
-└── img/                # Image assets
+├── components/ # Reusable components
+│ ├── GameBoard.jsx # Family Feud game board
+│ ├── ScoreBoard.jsx # Score display component
+│ ├── TeamSelector.jsx # Team selection component
+│ └── HomeButton.jsx # Home navigation button
+├── games/ # Individual game implementations
+│ ├── family-feud/
+│ │ ├── FamilyFeud.jsx
+│ │ └── questions.jsx
+│ ├── movie-quotes/
+│ │ ├── MovieQuotes.jsx
+│ │ └── questions.jsx
+│ ├── would-you-rather/
+│ │ ├── WouldYouRather.jsx
+│ │ └── questions.jsx
+│ ├── truth-or-dare/
+│ │ ├── TruthOrDare.jsx
+│ │ └── questions.jsx
+│ ├── never-have-i-ever/
+│ │ ├── NeverHaveIEver.jsx
+│ │ └── questions.jsx
+│ └── spicy-couple/
+│ ├── SpicyCouple.jsx
+│ └── questions.jsx
+├── pages/ # Main page components
+│ └── Home.jsx # Game selection page
+├── utils/ # Shared utility functions
+│ └── gameUtils.jsx # Game-related utilities
+├── constants/ # Application constants
+│ └── gameConstants.jsx
+├── img/ # Image assets
+├── index.jsx # App entry point
+├── App.jsx # Main App component
+├── index.css # Global styles
+└── reportWebVitals.jsx # Performance reporting
+
 ```
 
 ## 🛠️ Built With
@@ -137,3 +163,4 @@ All games are fully responsive and optimized for mobile devices with:
 - Family and friends for game testing and feedback
 - React community for excellent documentation
 - Create React App for the solid foundation
+```
