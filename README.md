@@ -81,51 +81,9 @@ pnpm install
 
 ```bash
 pnpm dev
-
+```
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## 🏗️ Project Structure
-
-```
-
-src/
-├── components/ # Reusable components
-│ ├── GameBoard.jsx # Family Feud game board
-│ ├── ScoreBoard.jsx # Score display component
-│ ├── TeamSelector.jsx # Team selection component
-│ └── HomeButton.jsx # Home navigation button
-├── games/ # Individual game implementations
-│ ├── family-feud/
-│ │ ├── FamilyFeud.jsx
-│ │ └── questions.jsx
-│ ├── movie-quotes/
-│ │ ├── MovieQuotes.jsx
-│ │ └── questions.jsx
-│ ├── would-you-rather/
-│ │ ├── WouldYouRather.jsx
-│ │ └── questions.jsx
-│ ├── truth-or-dare/
-│ │ ├── TruthOrDare.jsx
-│ │ └── questions.jsx
-│ ├── never-have-i-ever/
-│ │ ├── NeverHaveIEver.jsx
-│ │ └── questions.jsx
-│ └── spicy-couple/
-│ ├── SpicyCouple.jsx
-│ └── questions.jsx
-├── pages/ # Main page components
-│ └── Home.jsx # Game selection page
-├── utils/ # Shared utility functions
-│ └── gameUtils.jsx # Game-related utilities
-├── constants/ # Application constants
-│ └── gameConstants.jsx
-├── img/ # Image assets
-├── index.jsx # App entry point
-├── App.jsx # Main App component
-├── index.css # Global styles
-└── reportWebVitals.jsx # Performance reporting
-
-```
 
 ## 🛠️ Built With
 
