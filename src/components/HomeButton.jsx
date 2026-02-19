@@ -1,5 +1,4 @@
 import { House } from 'lucide-react';
-import React from 'react';
 
 const HomeButton = ({ onGoHome }) => {
   return (

@@ -25,7 +25,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen p-8 text-center">
+    <div className="min-h-screen p-3 text-center">
       <header className="bg-slate-800 rounded-lg p-8 mb-8 relative">
         <h1 className="text-3xl font-bold text-white">PlayGround</h1>
         {started && <HomeButton onGoHome={handleGoHome} />}

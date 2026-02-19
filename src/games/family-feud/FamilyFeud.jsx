@@ -11,7 +11,7 @@ const teams = [
   { name: 'Fish', icon: Fish }
 ];
 
-const FamilyFeud = ({ onGoHome }) => {
+const FamilyFeud = ({}) => {
   const [currentQuestionIdx, setCurrentQuestionIdx] = React.useState(0);
   const [revealedAnswers, setRevealedAnswers] = React.useState([]);
   const [teamScores, setTeamScores] = React.useState([0, 0]);
@@ -73,7 +73,7 @@ const FamilyFeud = ({ onGoHome }) => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto my-6 bg-white text-gray-900 rounded-lg p-6">
+    <div className="max-w-2xl mx-auto my-6 bg-white text-gray-900 rounded-lg p-3">
       {showCoinFlip && (
         <div className="bg-gray-100 p-8 rounded-lg">
           <h2 className="text-2xl font-bold mb-6 text-center">Flip a coin to see which team starts!</h2>

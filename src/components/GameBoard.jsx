@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const GameBoard = ({ question, answers, revealedAnswers, onAnswerSubmit }) => {
   const [input, setInput] = useState('');
@@ -29,13 +29,13 @@ const GameBoard = ({ question, answers, revealedAnswers, onAnswerSubmit }) => {
         </div>
       )}
       <h2 className="mb-4 text-xl font-bold text-indigo-400">{question}</h2>
-      <form className="flex gap-2 mb-4" onSubmit={handleSubmit}>
+      <form className="flex flex-col gap-2 mb-4" onSubmit={handleSubmit}>
         <input
           type="text"
           value={input}
           onChange={e => setInput(e.target.value)}
           placeholder="Type your answer..."
-          className="flex-1 px-4 py-2 border-2 border-gray-600 rounded-lg bg-gray-700 text-white focus:outline-none focus:border-indigo-500 disabled:opacity-50"
+          className="px-4 py-2 border-2 border-gray-600 rounded-lg bg-gray-700 text-white focus:outline-none focus:border-indigo-500 disabled:opacity-50"
           disabled={revealedAnswers.length === answers.length || showWrongImage}
         />
         <button
