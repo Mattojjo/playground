@@ -2,143 +2,143 @@ import { getRandomSubset } from '../../utils/gameUtils';
 
 const movieQuoteQuestions = [
     {
-        quote: "To infinity and beyond!",
-        options: ["Toy Story", "Finding Nemo", "Shrek", "Spirited Away"],
+        quote: "That wasn't flying, that was falling with style.",
+        options: ["Toy Story", "Toy Story 2", "A Bug's Life", "Monsters, Inc."],
         answer: "Toy Story"
     },
     {
-        quote: "Just keep swimming.",
-        options: ["Finding Nemo", "Frozen", "Monsters, Inc.", "Kiki's Delivery Service"],
+        quote: "When life gets you down, you know what you gotta do? Just keep swimming.",
+        options: ["Finding Dory", "Finding Nemo", "The Little Mermaid", "Moana"],
         answer: "Finding Nemo"
     },
     {
-        quote: "The past can hurt. But you can either run from it, or learn from it.",
-        options: ["The Lion King", "Up", "Howl's Moving Castle", "Kung Fu Panda"],
+        quote: "Oh yes, the past can hurt. But the way I see it, you can either run from it or learn from it.",
+        options: ["The Lion King", "The Lion King II", "Brother Bear", "Tarzan"],
         answer: "The Lion King"
     },
     {
-        quote: "Adventure is out there!",
-        options: ["Up", "Coco", "My Neighbor Totoro", "Madagascar"],
+        quote: "You know, it just a house.",
+        options: ["Up", "Monster House", "The Incredibles", "Ratatouille"],
         answer: "Up"
     },
     {
-        quote: "I am Groot.",
-        options: ["Guardians of the Galaxy", "Big Hero 6", "Shrek", "Castle in the Sky"],
+        quote: "We are Groot.",
+        options: ["Guardians of the Galaxy Vol. 2", "Guardians of the Galaxy", "Avengers: Infinity War", "Thor: Ragnarok"],
         answer: "Guardians of the Galaxy"
     },
     {
-        quote: "You must not let anyone define your limits because of where you come from.",
-        options: ["Ratatouille", "Frozen", "Ponyo", "Tangled"],
+        quote: "Your only limit is your soul. What I say is true - anyone can cook, but only the fearless can be great.",
+        options: ["Ratatouille", "The Incredibles", "Soul", "Coco"],
         answer: "Ratatouille"
     },
     {
-        quote: "The flower that blooms in adversity is the most rare and beautiful of all.",
-        options: ["Mulan", "Brave", "Princess Mononoke", "Shrek 2"],
+        quote: "The greatest gift and honor is having you for a daughter.",
+        options: ["Mulan", "Moana", "Brave", "Pocahontas"],
         answer: "Mulan"
     },
     {
-        quote: "Sometimes the right path is not the easiest one.",
-        options: ["Pocahontas", "Inside Out", "Spirited Away", "Madagascar"],
+        quote: "Listen with your heart, you will understand.",
+        options: ["Pocahontas", "Mulan", "The Princess and the Frog", "Tangled"],
         answer: "Pocahontas"
     },
     {
-        quote: "Life is a journey that must be traveled no matter how bad the roads and accommodations.",
-        options: ["Madagascar", "Cars", "Onward", "Castle in the Sky"],
+        quote: "You can't just sit here in the middle of nowhere.",
+        options: ["Madagascar", "Ice Age", "Rio", "The Wild"],
         answer: "Madagascar"
     },
     {
-        quote: "There's no place like home.",
-        options: ["The Wizard of Oz", "Finding Dory", "Kiki's Delivery Service", "Frozen"],
+        quote: "I've a feeling we're not in Kansas anymore.",
+        options: ["The Wizard of Oz", "Alice in Wonderland", "Peter Pan", "Willy Wonka"],
         answer: "The Wizard of Oz"
     },
     {
-        quote: "Reach for the sky!",
-        options: ["Toy Story", "Up", "Monsters, Inc.", "Frozen"],
+        quote: "This is the day you will always remember as the day you almost caught Captain Jack Sparrow.",
+        options: ["Pirates of the Caribbean", "Treasure Planet", "Peter Pan", "Sinbad"],
+        answer: "Pirates of the Caribbean"
+    },
+    {
+        quote: "That's not flying, that's just falling with style.",
+        options: ["Toy Story", "The Incredibles", "Cars", "A Bug's Life"],
         answer: "Toy Story"
     },
     {
-        quote: "You are a toy!",
-        options: ["Toy Story", "Finding Nemo", "Shrek", "Coco"],
-        answer: "Toy Story"
-    },
-    {
-        quote: "Fish are friends, not food.",
-        options: ["Finding Nemo", "Shark Tale", "Madagascar", "Frozen"],
+        quote: "I am a nice shark, not a mindless eating machine.",
+        options: ["Finding Nemo", "Shark Tale", "Finding Dory", "The Little Mermaid"],
         answer: "Finding Nemo"
     },
     {
-        quote: "I never look back, darling. It distracts from the now.",
-        options: ["The Incredibles", "Toy Story", "Frozen", "Up"],
+        quote: "You can't! You can't! There's no way you can quit!",
+        options: ["The Incredibles", "The Incredibles 2", "Ratatouille", "Inside Out"],
         answer: "The Incredibles"
     },
     {
-        quote: "Hakuna Matata!",
-        options: ["The Lion King", "Madagascar", "Finding Nemo", "Up"],
+        quote: "What do you want me to do? Dress in drag and do the hula?",
+        options: ["The Lion King", "Aladdin", "Hercules", "Mulan"],
         answer: "The Lion King"
     },
     {
-        quote: "Remember who you are.",
-        options: ["The Lion King", "Up", "Frozen", "Toy Story"],
+        quote: "You have forgotten who you are and so have forgotten me.",
+        options: ["The Lion King", "The Lion King II", "Tarzan", "Brother Bear"],
         answer: "The Lion King"
     },
     {
-        quote: "You’ve got a friend in me.",
-        options: ["Toy Story", "Frozen", "Up", "Monsters, Inc."],
+        quote: "Strange things are happening to me.",
+        options: ["Toy Story", "Toy Story 2", "Monsters, Inc.", "A Bug's Life"],
         answer: "Toy Story"
     },
     {
-        quote: "I will never be good enough for you.",
-        options: ["Ratatouille", "Frozen", "Up", "Toy Story"],
+        quote: "Not everyone can become a great artist, but a great artist can come from anywhere.",
+        options: ["Ratatouille", "Coco", "Soul", "Inside Out"],
         answer: "Ratatouille"
     },
     {
-        quote: "Anyone can cook.",
-        options: ["Ratatouille", "Frozen", "Toy Story", "Up"],
+        quote: "You are not a cooking robot. You are a chef!",
+        options: ["Ratatouille", "The Incredibles", "WALL-E", "Big Hero 6"],
         answer: "Ratatouille"
     },
     {
-        quote: "The only thing predictable about life is its unpredictability.",
-        options: ["Ratatouille", "Up", "Frozen", "Toy Story"],
+        quote: "Change is nature, the part that we can influence. And it starts when we decide.",
+        options: ["Ratatouille", "Up", "Inside Out", "Zootopia"],
         answer: "Ratatouille"
     },
     {
-        quote: "Let it go.",
-        options: ["Frozen", "Up", "Toy Story", "Ratatouille"],
+        quote: "Don't let them in, don't let them see. Be the good girl you always have to be.",
+        options: ["Frozen", "Frozen II", "Tangled", "Moana"],
         answer: "Frozen"
     },
     {
-        quote: "The cold never bothered me anyway.",
-        options: ["Frozen", "Up", "Toy Story", "Ratatouille"],
+        quote: "Fear will be your enemy.",
+        options: ["Frozen", "Frozen II", "Brave", "Moana"],
         answer: "Frozen"
     },
     {
-        quote: "Some people are worth melting for.",
-        options: ["Frozen", "Up", "Toy Story", "Ratatouille"],
+        quote: "Love is putting someone else's needs before yours.",
+        options: ["Frozen", "Beauty and the Beast", "Tangled", "The Princess and the Frog"],
         answer: "Frozen"
     },
     {
-        quote: "Do you want to build a snowman?",
-        options: ["Frozen", "Up", "Toy Story", "Ratatouille"],
+        quote: "An act of true love will thaw a frozen heart.",
+        options: ["Frozen", "Frozen II", "Beauty and the Beast", "Sleeping Beauty"],
         answer: "Frozen"
     },
     {
-        quote: "I have just met you, and I love you.",
-        options: ["Up", "Toy Story", "Frozen", "Ratatouille"],
+        quote: "I was hiding under your porch because I love you.",
+        options: ["Up", "Bolt", "The Secret Life of Pets", "Finding Dory"],
         answer: "Up"
     },
     {
-        quote: "Thanks for the adventure—now go have a new one!",
-        options: ["Up", "Toy Story", "Frozen", "Ratatouille"],
+        quote: "You know what? You can't keep the bird. It's wild.",
+        options: ["Up", "Rio", "Finding Nemo", "Ice Age"],
         answer: "Up"
     },
     {
-        quote: "Squirrel!",
-        options: ["Up", "Toy Story", "Frozen", "Ratatouille"],
+        quote: "I do not like the Cone of Shame.",
+        options: ["Up", "Bolt", "The Secret Life of Pets", "Finding Dory"],
         answer: "Up"
     },
     {
-        quote: "I’m not crying, you’re crying.",
-        options: ["Up", "Toy Story", "Frozen", "Ratatouille"],
+        quote: "You are my greatest adventure.",
+        options: ["Up", "The Incredibles", "Finding Nemo", "Inside Out"],
         answer: "Up"
     },
     {
@@ -172,24 +172,19 @@ const movieQuoteQuestions = [
         answer: "Shrek"
     },
     {
-        quote: "Better out than in, I always say.",
-        options: ["Shrek", "Toy Story", "Frozen", "Up"],
+        quote: "For you, baby, I could be.",
+        options: ["Shrek", "Shrek 2", "Tangled", "Beauty and the Beast"],
         answer: "Shrek"
     },
     {
-        quote: "This is the part where you run away.",
-        options: ["Shrek", "Toy Story", "Frozen", "Up"],
+        quote: "What are you doing in my swamp?!",
+        options: ["Shrek", "Shrek 2", "Shrek Forever After", "The Princess and the Frog"],
         answer: "Shrek"
     },
     {
-        quote: "Donkey, you have the right to remain silent.",
-        options: ["Shrek", "Toy Story", "Frozen", "Up"],
-        answer: "Shrek"
-    },
-    {
-        quote: "Somebody once told me the world is gonna roll me.",
-        options: ["Shrek", "Toy Story", "Frozen", "Up"],
-        answer: "Shrek"
+        quote: "I need a hero!",
+        options: ["Shrek 2", "Shrek", "Hercules", "Mulan"],
+        answer: "Shrek 2"
     },
     {
         quote: "I like to move it, move it.",
@@ -242,38 +237,38 @@ const movieQuoteQuestions = [
         answer: "Star Wars"
     },
     {
-        quote: "I’m Batman.",
-        options: ["The Lego Movie", "Toy Story", "Frozen", "Up"],
+        quote: "Darkness. No parents. Continued darkness.",
+        options: ["The Lego Batman Movie", "The Lego Movie", "The Batman", "The Dark Knight"],
+        answer: "The Lego Batman Movie"
+    },
+    {
+        quote: "Introducing the double-decker couch!",
+        options: ["The Lego Movie", "The Lego Batman Movie", "The Lego Movie 2", "Toy Story"],
         answer: "The Lego Movie"
     },
     {
-        quote: "Everything is awesome!",
-        options: ["The Lego Movie", "Toy Story", "Frozen", "Up"],
+        quote: "I'm not just a character, I'm a person!",
+        options: ["The Lego Movie", "The Lego Movie 2", "Toy Story", "Wreck-It Ralph"],
         answer: "The Lego Movie"
     },
     {
-        quote: "I’m a master builder.",
-        options: ["The Lego Movie", "Toy Story", "Frozen", "Up"],
-        answer: "The Lego Movie"
-    },
-    {
-        quote: "Honey, where is my super suit?",
-        options: ["The Incredibles", "Toy Story", "Frozen", "Up"],
+        quote: "Greater good? I am your wife! I'm the greatest good you are ever gonna get!",
+        options: ["The Incredibles", "The Incredibles 2", "Ratatouille", "Inside Out"],
         answer: "The Incredibles"
     },
     {
-        quote: "I am not a baby! I am a grown man!",
-        options: ["The Incredibles", "Toy Story", "Frozen", "Up"],
+        quote: "You want to do something for your family? Then be Mr. Incredible.",
+        options: ["The Incredibles", "The Incredibles 2", "Big Hero 6", "Sky High"],
         answer: "The Incredibles"
     },
     {
-        quote: "No capes!",
-        options: ["The Incredibles", "Toy Story", "Frozen", "Up"],
+        quote: "I'm The Underminer! I'm always beneath you, but nothing is beneath me!",
+        options: ["The Incredibles", "Megamind", "Despicable Me", "The Lego Batman Movie"],
         answer: "The Incredibles"
     },
     {
-        quote: "I never look back, darling.",
-        options: ["The Incredibles", "Toy Story", "Frozen", "Up"],
+        quote: "Luck favors the prepared.",
+        options: ["The Incredibles", "The Incredibles 2", "Ratatouille", "Big Hero 6"],
         answer: "The Incredibles"
     },
     {
@@ -302,83 +297,83 @@ const movieQuoteQuestions = [
         answer: "Finding Nemo"
     },
     {
-        quote: "I’m not a princess.",
-        options: ["Brave", "Frozen", "Toy Story", "Up"],
+        quote: "There are those who say fate is something beyond our command. That destiny is not our own, but I know better.",
+        options: ["Brave", "Mulan", "Moana", "Pocahontas"],
         answer: "Brave"
     },
     {
-        quote: "Our fate lives within us. You only have to be brave enough to see it.",
-        options: ["Brave", "Frozen", "Toy Story", "Up"],
+        quote: "Legends are lessons. They ring with truth.",
+        options: ["Brave", "Moana", "Mulan", "The Princess and the Frog"],
         answer: "Brave"
     },
     {
-        quote: "If you had the chance to change your fate, would you?",
-        options: ["Brave", "Frozen", "Toy Story", "Up"],
+        quote: "Some say our destiny is tied to the land, as much a part of us as we are of it.",
+        options: ["Brave", "Pocahontas", "Moana", "Brother Bear"],
         answer: "Brave"
     },
     {
-        quote: "I’m Merida, and I’ll be shooting for my own hand!",
-        options: ["Brave", "Frozen", "Toy Story", "Up"],
+        quote: "The wisp will lead me to my fate.",
+        options: ["Brave", "Frozen", "Tangled", "Moana"],
         answer: "Brave"
     },
     {
-        quote: "I am not a prize to be won.",
-        options: ["Aladdin", "Frozen", "Toy Story", "Up"],
+        quote: "Do you trust me?",
+        options: ["Aladdin", "Frozen", "Tangled", "Beauty and the Beast"],
         answer: "Aladdin"
     },
     {
-        quote: "A whole new world.",
-        options: ["Aladdin", "Frozen", "Toy Story", "Up"],
+        quote: "I can show you the world.",
+        options: ["Aladdin", "Tangled", "The Little Mermaid", "Frozen"],
         answer: "Aladdin"
     },
     {
-        quote: "You ain’t never had a friend like me.",
-        options: ["Aladdin", "Frozen", "Toy Story", "Up"],
+        quote: "Ten thousand years will give you such a crick in the neck!",
+        options: ["Aladdin", "The Emperor's New Groove", "Hercules", "Moana"],
         answer: "Aladdin"
     },
     {
-        quote: "Phenomenal cosmic powers! Itty bitty living space.",
-        options: ["Aladdin", "Frozen", "Toy Story", "Up"],
+        quote: "I'm a street rat, remember?",
+        options: ["Aladdin", "The Princess and the Frog", "Tangled", "The Hunchback of Notre Dame"],
         answer: "Aladdin"
     },
     {
-        quote: "I’m surrounded by idiots.",
-        options: ["The Lion King", "Frozen", "Toy Story", "Up"],
+        quote: "Everything the light touches is our kingdom.",
+        options: ["The Lion King", "The Lion King II", "Brother Bear", "Tarzan"],
         answer: "The Lion King"
     },
     {
-        quote: "Long live the king.",
-        options: ["The Lion King", "Frozen", "Toy Story", "Up"],
+        quote: "Oh yes, the past can hurt. But from the way I see it, you can either run from it, or learn from it.",
+        options: ["The Lion King", "The Lion King II", "Brother Bear", "Kung Fu Panda"],
         answer: "The Lion King"
     },
     {
-        quote: "Simba, you deliberately disobeyed me.",
-        options: ["The Lion King", "Frozen", "Toy Story", "Up"],
+        quote: "Life's not fair, is it?",
+        options: ["The Lion King", "The Lion King 1½", "Brother Bear", "The Jungle Book"],
         answer: "The Lion King"
     },
     {
-        quote: "It’s the circle of life.",
-        options: ["The Lion King", "Frozen", "Toy Story", "Up"],
+        quote: "I'm ten times the king Mufasa was!",
+        options: ["The Lion King", "The Lion King II", "The Lion King 1½", "Brother Bear"],
         answer: "The Lion King"
     },
     {
-        quote: "I’m not a monster. I’m just ahead of the curve.",
-        options: ["The Dark Knight", "Frozen", "Toy Story", "Up"],
+        quote: "Does it come in black?",
+        options: ["Batman Begins", "The Dark Knight", "The Dark Knight Rises", "Batman"],
+        answer: "Batman Begins"
+    },
+    {
+        quote: "I'm not wearing hockey pads.",
+        options: ["The Dark Knight", "Batman Begins", "The Dark Knight Rises", "Batman v Superman"],
         answer: "The Dark Knight"
     },
     {
-        quote: "Why so serious?",
-        options: ["The Dark Knight", "Frozen", "Toy Story", "Up"],
+        quote: "This city deserves a better class of criminal.",
+        options: ["The Dark Knight", "Batman Begins", "The Dark Knight Rises", "Joker"],
         answer: "The Dark Knight"
     },
     {
-        quote: "You either die a hero or live long enough to see yourself become the villain.",
-        options: ["The Dark Knight", "Frozen", "Toy Story", "Up"],
-        answer: "The Dark Knight"
-    },
-    {
-        quote: "Some men just want to watch the world burn.",
-        options: ["The Dark Knight", "Frozen", "Toy Story", "Up"],
+        quote: "Let's put a smile on that face!",
+        options: ["The Dark Knight", "Joker", "Batman", "The Dark Knight Rises"],
         answer: "The Dark Knight"
     }
 ];
