@@ -2,7 +2,7 @@ import React from 'react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import HomeButton from './HomeButton';
+import HomeButton from '../../src/components/HomeButton';
 
 describe('HomeButton Component', () => {
   const mockOnGoHome = vi.fn();

@@ -2,10 +2,10 @@ import React from 'react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import MovieQuotes from './MovieQuotes';
+import MovieQuotes from '../../../src/games/movie-quotes/MovieQuotes';
 
 // Mock the questions module
-vi.mock('./questions', () => ({
+vi.mock('../../../src/games/movie-quotes/questions', () => ({
   default: [
     {
       quote: 'May the Force be with you',

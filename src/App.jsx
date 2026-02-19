@@ -24,10 +24,12 @@ function App() {
     setSelectedGame(GAME_TYPES.FAMILY_FEUD);
   };
 
+  const titleClasses = started ? 'text-3xl font-bold text-white' : 'text-4xl font-bold text-white';
+
   return (
     <div className="min-h-screen p-3 text-center">
       <header className="bg-slate-800 rounded-lg p-8 mb-8 relative">
-        <h1 className="text-3xl font-bold text-white">PlayGround</h1>
+        <h1 className={titleClasses}>PlayGround</h1>
         {started && <HomeButton onGoHome={handleGoHome} />}
       </header>
 

@@ -1,8 +1,8 @@
 import React from 'react';import { describe, it, expect, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import Home from './Home';
-import { GAME_TYPES } from '../constants/gameConstants';
+import Home from '../../src/pages/Home';
+import { GAME_TYPES } from '../../src/constants/gameConstants';
 
 describe('Home Component', () => {
   const mockOnStart = vi.fn();

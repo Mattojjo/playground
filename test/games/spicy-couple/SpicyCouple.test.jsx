@@ -2,10 +2,10 @@ import React from 'react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import SpicyCouple from './SpicyCouple';
+import SpicyCouple from '../../../src/games/spicy-couple/SpicyCouple';
 
 // Mock the questions module
-vi.mock('./questions', () => ({
+vi.mock('../../../src/games/spicy-couple/questions', () => ({
   default: [
     {
       question: 'Would you rather kiss with eyes open or closed?',

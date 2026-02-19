@@ -2,7 +2,7 @@ import React from 'react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import TeamSelector from './TeamSelector';
+import TeamSelector from '../../src/components/TeamSelector';
 import { Cat, Fish } from 'lucide-react';
 
 describe('TeamSelector Component', () => {

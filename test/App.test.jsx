@@ -2,17 +2,17 @@ import React from 'react';
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import App from './App';
-import { GAME_TYPES } from './constants/gameConstants';
+import App from '../src/App';
+import { GAME_TYPES } from '../src/constants/gameConstants';
 
 // Mock child components to avoid complexity
-vi.mock('./pages/Home', () => ({
+vi.mock('../src/pages/Home', () => ({
   default: ({ onStart }) => (
     <button onClick={() => onStart(GAME_TYPES.FAMILY_FEUD)}>Start Game</button>
   )
 }));
 
-vi.mock('./games/family-feud/FamilyFeud', () => ({
+vi.mock('../src/games/family-feud/FamilyFeud', () => ({
   default: ({ onGoHome }) => (
     <div>
       <h2>Family Feud Game</h2>
@@ -21,7 +21,7 @@ vi.mock('./games/family-feud/FamilyFeud', () => ({
   )
 }));
 
-vi.mock('./games/would-you-rather/WouldYouRather', () => ({
+vi.mock('../src/games/would-you-rather/WouldYouRather', () => ({
   default: ({ onGoHome }) => (
     <div>
       <h2>Would You Rather Game</h2>
@@ -30,7 +30,7 @@ vi.mock('./games/would-you-rather/WouldYouRather', () => ({
   )
 }));
 
-vi.mock('./games/spicy-couple/SpicyCouple', () => ({
+vi.mock('../src/games/spicy-couple/SpicyCouple', () => ({
   default: ({ onGoHome }) => (
     <div>
       <h2>Spicy Couple Game</h2>
@@ -39,7 +39,7 @@ vi.mock('./games/spicy-couple/SpicyCouple', () => ({
   )
 }));
 
-vi.mock('./games/truth-or-dare/TruthOrDare', () => ({
+vi.mock('../src/games/truth-or-dare/TruthOrDare', () => ({
   default: ({ onGoHome }) => (
     <div>
       <h2>Truth or Dare Game</h2>
@@ -48,7 +48,7 @@ vi.mock('./games/truth-or-dare/TruthOrDare', () => ({
   )
 }));
 
-vi.mock('./games/never-have-i-ever/NeverHaveIEver', () => ({
+vi.mock('../src/games/never-have-i-ever/NeverHaveIEver', () => ({
   default: ({ onGoHome }) => (
     <div>
       <h2>Never Have I Ever Game</h2>
@@ -57,7 +57,7 @@ vi.mock('./games/never-have-i-ever/NeverHaveIEver', () => ({
   )
 }));
 
-vi.mock('./games/movie-quotes/MovieQuotes', () => ({
+vi.mock('../src/games/movie-quotes/MovieQuotes', () => ({
   default: ({ onGoHome }) => (
     <div>
       <h2>Movie Quotes Game</h2>

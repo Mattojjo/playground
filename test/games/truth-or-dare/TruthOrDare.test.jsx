@@ -2,10 +2,10 @@ import React from 'react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import TruthOrDare from './TruthOrDare';
+import TruthOrDare from '../../../src/games/truth-or-dare/TruthOrDare';
 
 // Mock the questions module
-vi.mock('./questions', () => ({
+vi.mock('../../../src/games/truth-or-dare/questions', () => ({
   default: [
     { type: 'truth', text: 'What is your biggest fear?' },
     { type: 'truth', text: 'What is your most embarrassing moment?' },

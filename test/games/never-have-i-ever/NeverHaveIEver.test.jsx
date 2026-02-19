@@ -2,10 +2,10 @@ import React from 'react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import NeverHaveIEver from './NeverHaveIEver';
+import NeverHaveIEver from '../../../src/games/never-have-i-ever/NeverHaveIEver';
 
 // Mock the questions module
-vi.mock('./questions', () => ({
+vi.mock('../../../src/games/never-have-i-ever/questions', () => ({
   default: [
     'Never have I ever been skydiving',
     'Never have I ever eaten sushi',

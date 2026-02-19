@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import { fuzzyMatch, shuffleArray, getRandomSubset } from './gameUtils';
+import { fuzzyMatch, shuffleArray, getRandomSubset } from '../../src/utils/gameUtils';
 
-describe('gameUtils', () => {
-  describe('fuzzyMatch', () => {
+describe('Unit Tests', () => {
+  describe('gameUtils - fuzzyMatch', () => {
     it('should return true for exact matches', () => {
       expect(fuzzyMatch('Brush teeth', 'Brush teeth')).toBe(true);
     });
@@ -16,8 +16,8 @@ describe('gameUtils', () => {
     });
 
     it('should return true for fuzzy matches within max distance', () => {
-      expect(fuzzyMatch('Brushe teeth', 'Brush teeth')).toBe(true); // 1 char difference
-      expect(fuzzyMatch('Bruh teeth', 'Brush teeth')).toBe(true); // 2 char difference
+      expect(fuzzyMatch('Brushe teeth', 'Brush teeth')).toBe(true);
+      expect(fuzzyMatch('Bruh teeth', 'Brush teeth')).toBe(true);
     });
 
     it('should return true for single character matches', () => {
@@ -29,7 +29,7 @@ describe('gameUtils', () => {
     });
 
     it('should return false for matches exceeding max distance', () => {
-      expect(fuzzyMatch('abc', 'abcdefgh')).toBe(false); // 5 char difference, exceeds default maxDistance of 3
+      expect(fuzzyMatch('abc', 'abcdefgh')).toBe(false);
     });
 
     it('should return false for completely different strings', () => {
@@ -37,7 +37,7 @@ describe('gameUtils', () => {
     });
 
     it('should handle partial matches with fuzzy logic', () => {
-      expect(fuzzyMatch('piza', 'pizza')).toBe(true); // 1 char difference
+      expect(fuzzyMatch('piza', 'pizza')).toBe(true);
     });
 
     it('should be case-insensitive with distance', () => {
@@ -60,7 +60,7 @@ describe('gameUtils', () => {
     });
   });
 
-  describe('shuffleArray', () => {
+  describe('gameUtils - shuffleArray', () => {
     it('should return an array of same length', () => {
       const arr = [1, 2, 3, 4, 5];
       const shuffled = shuffleArray(arr);
@@ -129,7 +129,7 @@ describe('gameUtils', () => {
     });
   });
 
-  describe('getRandomSubset', () => {
+  describe('gameUtils - getRandomSubset', () => {
     it('should return subset of correct size', () => {
       const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
       const subset = getRandomSubset(arr, 3);
@@ -190,7 +190,6 @@ describe('gameUtils', () => {
       const subset1 = getRandomSubset(arr, 5);
       const subset2 = getRandomSubset(arr, 5);
       
-      // They might be equal but with high probability they're different
       expect(subset1.length).toBe(5);
       expect(subset2.length).toBe(5);
     });

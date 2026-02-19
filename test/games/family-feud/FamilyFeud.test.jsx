@@ -2,10 +2,10 @@ import React from 'react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import FamilyFeud from './FamilyFeud';
+import FamilyFeud from '../../../src/games/family-feud/FamilyFeud';
 
 // Mock the questions module
-vi.mock('./questions', () => ({
+vi.mock('../../../src/games/family-feud/questions', () => ({
   default: [
     {
       question: 'Name a popular pizza topping',
@@ -26,7 +26,7 @@ vi.mock('./questions', () => ({
 }));
 
 // Mock child components
-vi.mock('../../components/ScoreBoard', () => ({
+vi.mock('../../../src/components/ScoreBoard', () => ({
   default: ({ teamScores, teams }) => (
     <div data-testid="scoreboard">
       {teams[0].name}: {teamScores[0]} | {teams[1].name}: {teamScores[1]}
@@ -34,7 +34,7 @@ vi.mock('../../components/ScoreBoard', () => ({
   )
 }));
 
-vi.mock('../../components/TeamSelector', () => ({
+vi.mock('../../../src/components/TeamSelector', () => ({
   default: ({ teams, currentTeam, onNextTeam }) => (
     <div data-testid="teamselector">
       <div>Current: {teams[currentTeam].name}</div>
@@ -43,7 +43,7 @@ vi.mock('../../components/TeamSelector', () => ({
   )
 }));
 
-vi.mock('../../components/GameBoard', () => ({
+vi.mock('../../../src/components/GameBoard', () => ({
   default: ({ question, answers, revealedAnswers, onAnswerSubmit }) => (
     <div data-testid="gameboard">
       <h2>{question}</h2>

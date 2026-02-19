@@ -1,7 +1,7 @@
 import React from 'react';
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import ScoreBoard from './ScoreBoard';
+import ScoreBoard from '../../src/components/ScoreBoard';
 import { Cat, Fish } from 'lucide-react';
 
 describe('ScoreBoard Component', () => {
