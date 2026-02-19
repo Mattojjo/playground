@@ -3,7 +3,7 @@ import questions from "./questions";
 import { shuffleArray } from "../../utils/gameUtils";
 import { GAME_CONFIG, GAME_TYPES, UI_CONSTANTS } from "../../constants/gameConstants";
 
-const MovieQuotes = ({ onGoHome }) => {
+const MovieQuotes = ({}) => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showResult, setShowResult] = useState(false);

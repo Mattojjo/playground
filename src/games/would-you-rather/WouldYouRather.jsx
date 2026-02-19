@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import questions from './questions';
 
-const WouldYouRather = ({ onGoHome }) => {
+const WouldYouRather = () => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState([]);
   const { question, options } = questions[currentIdx];

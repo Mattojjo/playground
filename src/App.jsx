@@ -37,12 +37,12 @@ function App() {
         <Home onStart={handleStart} />
       ) : (
         <>
-          {selectedGame === GAME_TYPES.FAMILY_FEUD && <FamilyFeud onGoHome={handleGoHome} />}
-          {selectedGame === GAME_TYPES.WOULD_YOU_RATHER && <WouldYouRather onGoHome={handleGoHome} />}
-          {selectedGame === GAME_TYPES.SPICY_COUPLE && <SpicyCouple onGoHome={handleGoHome} />}
-          {selectedGame === GAME_TYPES.TRUTH_OR_DARE && <TruthOrDare onGoHome={handleGoHome} />}
-          {selectedGame === GAME_TYPES.NEVER_HAVE_I_EVER && <NeverHaveIEver onGoHome={handleGoHome} />}
-          {selectedGame === GAME_TYPES.MOVIE_QUOTES && <MovieQuotes onGoHome={handleGoHome} />}
+          {selectedGame === GAME_TYPES.FAMILY_FEUD && <FamilyFeud />}
+          {selectedGame === GAME_TYPES.WOULD_YOU_RATHER && <WouldYouRather />}
+          {selectedGame === GAME_TYPES.SPICY_COUPLE && <SpicyCouple />}
+          {selectedGame === GAME_TYPES.TRUTH_OR_DARE && <TruthOrDare />}
+          {selectedGame === GAME_TYPES.NEVER_HAVE_I_EVER && <NeverHaveIEver />}
+          {selectedGame === GAME_TYPES.MOVIE_QUOTES && <MovieQuotes />}
         </>
       )}
       <Analytics />

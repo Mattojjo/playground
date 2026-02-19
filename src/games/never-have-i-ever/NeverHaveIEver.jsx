@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import questions from "./questions";
 
-const NeverHaveIEver = ({ onGoHome }) => {
+const NeverHaveIEver = () => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState([]);
   const question = questions[currentIdx];

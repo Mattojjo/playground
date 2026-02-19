@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import questions from './questions';
 
-const SpicyCouple = ({ onGoHome }) => {
+const SpicyCouple = () => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [showDare, setShowDare] = useState(false);
   const { question, dare } = questions[currentIdx];

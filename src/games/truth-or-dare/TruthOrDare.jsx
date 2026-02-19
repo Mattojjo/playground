@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import questions from "./questions";
 
-const TruthOrDare = ({ onGoHome }) => {
+const TruthOrDare = () => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [selectedType, setSelectedType] = useState(null);
