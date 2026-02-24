@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Trophy, Scale, Flame, Target, Eye, Film } from 'lucide-react';
+import { Trophy, Scale, Flame, Target, Eye, Film, Keyboard } from 'lucide-react';
 import { GAME_TYPES } from '../constants/gameConstants';
 
 const gameOptions = [
@@ -9,6 +9,7 @@ const gameOptions = [
   { key: GAME_TYPES.TRUTH_OR_DARE, label: 'Truth or Dare', icon: <Target className="w-12 h-12" /> },
   { key: GAME_TYPES.NEVER_HAVE_I_EVER, label: 'Never Have I Ever', icon: <Eye className="w-12 h-12" /> },
   { key: GAME_TYPES.MOVIE_QUOTES, label: 'Movie Quotes', icon: <Film className="w-12 h-12" /> },
+  { key: GAME_TYPES.WORD_HINT, label: 'Word Hint', icon: <Keyboard className="w-12 h-12" /> },
 ];
 
 const Home = ({ onStart }) => {

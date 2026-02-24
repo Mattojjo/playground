@@ -4,7 +4,8 @@ export const GAME_TYPES = {
   SPICY_COUPLE: 'spicyCouple',
   TRUTH_OR_DARE: 'truthOrDare',
   NEVER_HAVE_I_EVER: 'neverHaveIEver',
-  MOVIE_QUOTES: 'movieQuotes'
+  MOVIE_QUOTES: 'movieQuotes',
+  WORD_HINT: 'wordHint'
 };
 
 export const GAME_CONFIG = {

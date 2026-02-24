@@ -7,6 +7,7 @@ import SpicyCouple from './games/spicy-couple/SpicyCouple';
 import TruthOrDare from './games/truth-or-dare/TruthOrDare';
 import NeverHaveIEver from './games/never-have-i-ever/NeverHaveIEver';
 import MovieQuotes from './games/movie-quotes/MovieQuotes';
+import WordHint from './games/word-hint/WordHint';
 import { GAME_TYPES } from './constants/gameConstants';
 import HomeButton from './components/HomeButton';
 
@@ -43,6 +44,7 @@ function App() {
           {selectedGame === GAME_TYPES.TRUTH_OR_DARE && <TruthOrDare />}
           {selectedGame === GAME_TYPES.NEVER_HAVE_I_EVER && <NeverHaveIEver />}
           {selectedGame === GAME_TYPES.MOVIE_QUOTES && <MovieQuotes />}
+          {selectedGame === GAME_TYPES.WORD_HINT && <WordHint />}
         </>
       )}
       <Analytics />
