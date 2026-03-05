@@ -1,421 +1,421 @@
 const questions = [
   {
-    hint: 'Tropical fruit often used in smoothies',
-    answer: 'MANGO',
-    allowedLetters: ['M', 'A', 'N', 'G', 'O', 'R', 'L', 'T'],
+    hint: 'An erupting mountain',
+    answer: 'VOLCANO',
+    allowedLetters: ['R', 'V', 'C', 'T', 'O', 'N', 'L', 'A'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Intelligent marine mammal',
+    answer: 'DOLPHIN',
+    allowedLetters: ['O', 'T', 'N', 'D', 'L', 'H', 'P', 'I'],
+    maxLetterGuesses: 6
+  },
+  {
+    hint: 'Gas essential for breathing',
+    answer: 'OXYGEN',
+    allowedLetters: ['A', 'G', 'O', 'R', 'Y', 'N', 'X', 'E'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Dense tropical rainforest',
+    answer: 'JUNGLE',
+    allowedLetters: ['T', 'N', 'J', 'L', 'R', 'G', 'U', 'E'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Eight-legged web-spinning creature',
+    answer: 'SPIDER',
+    allowedLetters: ['L', 'D', 'S', 'A', 'P', 'R', 'I', 'E'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Soft natural fabric from a plant',
+    answer: 'COTTON',
+    allowedLetters: ['R', 'C', 'L', 'T', 'A', 'N', 'O', 'S'],
     maxLetterGuesses: 4
   },
   {
-    hint: 'Planet known as the Red Planet',
-    answer: 'MARS',
-    allowedLetters: ['M', 'A', 'R', 'S', 'E', 'T', 'V', 'P'],
+    hint: 'Fast bird of prey',
+    answer: 'FALCON',
+    allowedLetters: ['T', 'L', 'F', 'O', 'R', 'A', 'N', 'C'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Small fruit that grows in clusters on a vine',
+    answer: 'GRAPES',
+    allowedLetters: ['A', 'T', 'G', 'S', 'L', 'R', 'E', 'P'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Reflective glass surface',
+    answer: 'MIRROR',
+    allowedLetters: ['T', 'R', 'L', 'M', 'A', 'I', 'S', 'O'],
+    maxLetterGuesses: 4
+  },
+  {
+    hint: 'Medieval stone fortress',
+    answer: 'CASTLE',
+    allowedLetters: ['R', 'S', 'C', 'L', 'N', 'A', 'E', 'T'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Large arctic animal with tusks',
+    answer: 'WALRUS',
+    allowedLetters: ['N', 'R', 'W', 'T', 'A', 'S', 'L', 'U'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Tallest living land animal',
+    answer: 'GIRAFFE',
+    allowedLetters: ['L', 'A', 'G', 'E', 'T', 'R', 'F', 'I'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Spice often paired with salt',
+    answer: 'PEPPER',
+    allowedLetters: ['A', 'R', 'N', 'E', 'T', 'P', 'L', 'S'],
+    maxLetterGuesses: 4
+  },
+  {
+    hint: 'Machine that performs tasks automatically',
+    answer: 'ROBOT',
+    allowedLetters: ['L', 'O', 'A', 'R', 'S', 'B', 'N', 'T'],
     maxLetterGuesses: 3
   },
   {
-    hint: 'Instrument with black and white keys',
-    answer: 'PIANO',
-    allowedLetters: ['P', 'I', 'A', 'N', 'O', 'T', 'R', 'L'],
-    maxLetterGuesses: 4
-  },
-  {
-    hint: 'Fastest land animal',
-    answer: 'CHEETAH',
-    allowedLetters: ['C', 'H', 'E', 'T', 'A', 'L', 'R', 'S'],
+    hint: 'Planet with famous rings',
+    answer: 'SATURN',
+    allowedLetters: ['P', 'T', 'S', 'N', 'L', 'U', 'A', 'R'],
     maxLetterGuesses: 5
   },
   {
-    hint: 'Classic arcade game with falling blocks',
-    answer: 'TETRIS',
-    allowedLetters: ['T', 'E', 'R', 'I', 'S', 'A', 'L', 'O'],
-    maxLetterGuesses: 4
-  },
-  {
-    hint: 'Bird known for mimicking sounds',
-    answer: 'PARROT',
-    allowedLetters: ['P', 'A', 'R', 'O', 'T', 'L', 'E', 'S'],
+    hint: 'Large area covered with trees',
+    answer: 'FOREST',
+    allowedLetters: ['L', 'O', 'A', 'S', 'F', 'T', 'R', 'E'],
     maxLetterGuesses: 5
   },
   {
-    hint: 'Largest ocean on Earth',
-    answer: 'PACIFIC',
-    allowedLetters: ['P', 'A', 'C', 'I', 'F', 'R', 'L', 'T'],
-    maxLetterGuesses: 5
-  },
-  {
-    hint: 'Color made from red and blue',
-    answer: 'PURPLE',
-    allowedLetters: ['P', 'U', 'R', 'L', 'E', 'A', 'T', 'S'],
-    maxLetterGuesses: 5
-  },
-  {
-    hint: 'Tool used to hit nails',
-    answer: 'HAMMER',
-    allowedLetters: ['H', 'A', 'M', 'E', 'R', 'L', 'T', 'S'],
-    maxLetterGuesses: 5
-  },
-  {
-    hint: 'Device used to take photos',
-    answer: 'CAMERA',
-    allowedLetters: ['C', 'A', 'M', 'E', 'R', 'L', 'T', 'S'],
-    maxLetterGuesses: 4
-  },
-  {
-    hint: 'Gas plants absorb from the air',
-    answer: 'CARBON',
-    allowedLetters: ['C', 'A', 'R', 'B', 'O', 'N', 'L', 'T'],
-    maxLetterGuesses: 5
-  },
-  {
-    hint: 'Season after summer',
-    answer: 'AUTUMN',
-    allowedLetters: ['A', 'U', 'T', 'M', 'N', 'L', 'R', 'S'],
-    maxLetterGuesses: 4
-  },
-  {
-    hint: 'World currency used in Japan',
-    answer: 'YEN',
-    allowedLetters: ['Y', 'E', 'N', 'A', 'R', 'L', 'T', 'S'],
+    hint: 'Japanese dish with rice and fish',
+    answer: 'SUSHI',
+    allowedLetters: ['A', 'H', 'T', 'S', 'N', 'I', 'R', 'U'],
     maxLetterGuesses: 3
   },
   {
-    hint: 'Star at the center of our solar system',
-    answer: 'SUN',
-    allowedLetters: ['S', 'U', 'N', 'A', 'R', 'L', 'T', 'E'],
-    maxLetterGuesses: 2
+    hint: 'Orange vegetable carved at Halloween',
+    answer: 'PUMPKIN',
+    allowedLetters: ['T', 'M', 'P', 'N', 'R', 'K', 'U', 'I'],
+    maxLetterGuesses: 5
   },
   {
-    hint: 'Triangle-shaped snack chip',
-    answer: 'NACHO',
-    allowedLetters: ['N', 'A', 'C', 'H', 'O', 'R', 'T', 'S'],
+    hint: 'Spherical model of Earth',
+    answer: 'GLOBE',
+    allowedLetters: ['O', 'R', 'G', 'T', 'B', 'A', 'E', 'L'],
     maxLetterGuesses: 4
   },
   {
-    hint: 'Largest mammal in the ocean',
-    answer: 'WHALE',
-    allowedLetters: ['W', 'H', 'A', 'L', 'E', 'R', 'T', 'S'],
+    hint: 'Sheltered area where ships dock',
+    answer: 'HARBOR',
+    allowedLetters: ['T', 'B', 'H', 'L', 'S', 'A', 'O', 'R'],
     maxLetterGuesses: 4
   },
   {
-    hint: 'Frozen dessert on a cone',
-    answer: 'ICECREAM',
-    allowedLetters: ['I', 'C', 'E', 'R', 'A', 'M', 'L', 'T'],
-    maxLetterGuesses: 6
-  },
-  {
-    hint: 'Plant that grows in a pod and is green',
-    answer: 'PEA',
-    allowedLetters: ['P', 'E', 'A', 'R', 'L', 'T', 'S', 'N'],
-    maxLetterGuesses: 2
-  },
-  {
-    hint: 'Metal used in coins and wiring',
-    answer: 'COPPER',
-    allowedLetters: ['C', 'O', 'P', 'E', 'R', 'L', 'T', 'S'],
-    maxLetterGuesses: 5
-  },
-  {
-    hint: 'Gem often used in engagement rings',
-    answer: 'DIAMOND',
-    allowedLetters: ['D', 'I', 'A', 'M', 'O', 'N', 'L', 'R'],
-    maxLetterGuesses: 6
-  },
-  {
-    hint: 'Animal that carries its home',
-    answer: 'TURTLE',
-    allowedLetters: ['T', 'U', 'R', 'L', 'E', 'A', 'S', 'N'],
-    maxLetterGuesses: 5
-  },
-  {
-    hint: 'Smallest continent',
-    answer: 'EUROPE',
-    allowedLetters: ['E', 'U', 'R', 'O', 'P', 'L', 'T', 'A'],
-    maxLetterGuesses: 5
-  },
-  {
-    hint: 'Device that rings in the morning',
-    answer: 'ALARM',
-    allowedLetters: ['A', 'L', 'A', 'R', 'M', 'E', 'T', 'S'],
+    hint: 'Desert plant with sharp spines',
+    answer: 'CACTUS',
+    allowedLetters: ['L', 'T', 'C', 'N', 'A', 'S', 'R', 'U'],
     maxLetterGuesses: 4
   },
   {
-    hint: 'Month with a leap day',
-    answer: 'FEBRUARY',
-    allowedLetters: ['F', 'E', 'B', 'R', 'U', 'A', 'Y', 'L'],
-    maxLetterGuesses: 6
-  },
-  {
-    hint: 'Tool for cutting paper',
-    answer: 'SCISSORS',
-    allowedLetters: ['S', 'C', 'I', 'S', 'O', 'R', 'T', 'L'],
-    maxLetterGuesses: 6
-  },
-  {
-    hint: 'Sport played on ice with sticks',
-    answer: 'HOCKEY',
-    allowedLetters: ['H', 'O', 'C', 'K', 'E', 'Y', 'L', 'R'],
-    maxLetterGuesses: 5
-  },
-  {
-    hint: 'Large body of freshwater',
-    answer: 'LAKE',
-    allowedLetters: ['L', 'A', 'K', 'E', 'R', 'T', 'S', 'N'],
+    hint: 'Wobbly sweet food made from fruit',
+    answer: 'JELLY',
+    allowedLetters: ['R', 'L', 'J', 'A', 'Y', 'T', 'E', 'S'],
     maxLetterGuesses: 3
   },
   {
-    hint: 'A building where books are borrowed',
-    answer: 'LIBRARY',
-    allowedLetters: ['L', 'I', 'B', 'R', 'A', 'Y', 'T', 'S'],
-    maxLetterGuesses: 6
+    hint: 'Armored medieval warrior on horseback',
+    answer: 'KNIGHT',
+    allowedLetters: ['R', 'G', 'K', 'T', 'L', 'H', 'N', 'I'],
+    maxLetterGuesses: 5
   },
   {
-    hint: 'Animal known for its stripes',
-    answer: 'ZEBRA',
-    allowedLetters: ['Z', 'E', 'B', 'R', 'A', 'L', 'T', 'S'],
+    hint: 'Object that attracts iron and steel',
+    answer: 'MAGNET',
+    allowedLetters: ['L', 'G', 'M', 'T', 'R', 'N', 'A', 'E'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Shellfish that can produce pearls',
+    answer: 'OYSTER',
+    allowedLetters: ['A', 'S', 'O', 'L', 'T', 'Y', 'R', 'E'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Icy body with a bright tail in space',
+    answer: 'COMET',
+    allowedLetters: ['R', 'M', 'C', 'L', 'A', 'E', 'T', 'O'],
     maxLetterGuesses: 4
   },
   {
-    hint: 'Vehicle with two wheels and pedals',
-    answer: 'BICYCLE',
-    allowedLetters: ['B', 'I', 'C', 'Y', 'C', 'L', 'E', 'R'],
-    maxLetterGuesses: 6
+    hint: 'Common crystal mineral found in rocks',
+    answer: 'QUARTZ',
+    allowedLetters: ['S', 'A', 'Q', 'T', 'L', 'U', 'R', 'Z'],
+    maxLetterGuesses: 5
   },
   {
-    hint: 'Mountain in Japan with snow cap',
-    answer: 'FUJI',
-    allowedLetters: ['F', 'U', 'J', 'I', 'A', 'R', 'L', 'S'],
-    maxLetterGuesses: 3
-  },
-  {
-    hint: 'Shape with three sides',
-    answer: 'TRIANGLE',
-    allowedLetters: ['T', 'R', 'I', 'A', 'N', 'G', 'L', 'E'],
-    maxLetterGuesses: 6
-  },
-  {
-    hint: 'Large cat known as the king of the jungle',
-    answer: 'LION',
-    allowedLetters: ['L', 'I', 'O', 'N', 'A', 'R', 'T', 'S'],
-    maxLetterGuesses: 3
-  },
-  {
-    hint: 'Yellow fruit with a peel',
-    answer: 'BANANA',
-    allowedLetters: ['B', 'A', 'N', 'A', 'N', 'R', 'T', 'S'],
+    hint: 'Thin decorative strip of fabric',
+    answer: 'RIBBON',
+    allowedLetters: ['A', 'B', 'R', 'N', 'T', 'O', 'L', 'I'],
     maxLetterGuesses: 4
   },
   {
-    hint: 'Tool for writing with ink',
-    answer: 'PEN',
-    allowedLetters: ['P', 'E', 'N', 'A', 'R', 'L', 'T', 'S'],
-    maxLetterGuesses: 2
+    hint: 'Ancient place of worship',
+    answer: 'TEMPLE',
+    allowedLetters: ['R', 'P', 'T', 'L', 'A', 'M', 'S', 'E'],
+    maxLetterGuesses: 4
   },
   {
-    hint: 'Kitchen device that keeps food cold',
-    answer: 'FRIDGE',
-    allowedLetters: ['F', 'R', 'I', 'D', 'G', 'E', 'L', 'T'],
+    hint: 'Low land between two mountains',
+    answer: 'VALLEY',
+    allowedLetters: ['R', 'L', 'V', 'Y', 'T', 'A', 'S', 'E'],
+    maxLetterGuesses: 4
+  },
+  {
+    hint: 'Hard-shelled tree nut',
+    answer: 'WALNUT',
+    allowedLetters: ['S', 'L', 'W', 'T', 'R', 'A', 'N', 'U'],
     maxLetterGuesses: 5
   },
   {
-    hint: 'Public place to watch movies',
-    answer: 'CINEMA',
-    allowedLetters: ['C', 'I', 'N', 'E', 'M', 'A', 'R', 'T'],
+    hint: 'Thick dairy product made from fermented milk',
+    answer: 'YOGURT',
+    allowedLetters: ['A', 'G', 'Y', 'T', 'L', 'U', 'R', 'O'],
     maxLetterGuesses: 5
   },
   {
-    hint: 'Beverage made from tea leaves',
-    answer: 'TEA',
-    allowedLetters: ['T', 'E', 'A', 'R', 'L', 'S', 'N', 'P'],
-    maxLetterGuesses: 2
+    hint: 'Metal fastener with interlocking teeth',
+    answer: 'ZIPPER',
+    allowedLetters: ['A', 'P', 'Z', 'R', 'L', 'E', 'T', 'I'],
+    maxLetterGuesses: 4
   },
   {
-    hint: 'Famous clock tower in London',
-    answer: 'BIGBEN',
-    allowedLetters: ['B', 'I', 'G', 'E', 'N', 'A', 'R', 'T'],
+    hint: 'Heavy device that holds ships in place',
+    answer: 'ANCHOR',
+    allowedLetters: ['T', 'H', 'A', 'L', 'C', 'O', 'R', 'N'],
     maxLetterGuesses: 5
   },
   {
-    hint: 'Instrument with six strings',
-    answer: 'GUITAR',
-    allowedLetters: ['G', 'U', 'I', 'T', 'A', 'R', 'L', 'S'],
-    maxLetterGuesses: 5
-  },
-  {
-    hint: 'Red condiment often on fries',
-    answer: 'KETCHUP',
-    allowedLetters: ['K', 'E', 'T', 'C', 'H', 'U', 'P', 'L'],
+    hint: 'Structure that vents smoke from a fireplace',
+    answer: 'CHIMNEY',
+    allowedLetters: ['M', 'R', 'C', 'E', 'H', 'N', 'I', 'Y'],
     maxLetterGuesses: 6
   },
   {
-    hint: 'Device used to listen to music on the go',
-    answer: 'HEADPHONES',
-    allowedLetters: ['H', 'E', 'A', 'D', 'P', 'O', 'N', 'S'],
+    hint: 'When the moon blocks the sun',
+    answer: 'ECLIPSE',
+    allowedLetters: ['R', 'C', 'E', 'S', 'T', 'L', 'P', 'I'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Light growth that covers a bird',
+    answer: 'FEATHER',
+    allowedLetters: ['L', 'A', 'F', 'H', 'S', 'T', 'E', 'R'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Largest of the great apes',
+    answer: 'GORILLA',
+    allowedLetters: ['T', 'R', 'G', 'L', 'N', 'O', 'A', 'I'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Land completely surrounded by water',
+    answer: 'ISLAND',
+    allowedLetters: ['R', 'L', 'I', 'D', 'T', 'A', 'N', 'S'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Fluffy Australian marsupial that lives in trees',
+    answer: 'KOALA',
+    allowedLetters: ['R', 'A', 'K', 'S', 'T', 'O', 'N', 'L'],
+    maxLetterGuesses: 3
+  },
+  {
+    hint: 'South American pack animal with fluffy fur',
+    answer: 'LLAMA',
+    allowedLetters: ['R', 'M', 'E', 'L', 'T', 'A', 'N', 'S'],
+    maxLetterGuesses: 3
+  },
+  {
+    hint: 'Hard stone used in sculptures and floors',
+    answer: 'MARBLE',
+    allowedLetters: ['T', 'R', 'M', 'E', 'S', 'B', 'L', 'A'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Long thin strip of dough used in pasta',
+    answer: 'NOODLE',
+    allowedLetters: ['R', 'D', 'N', 'T', 'A', 'O', 'L', 'E'],
+    maxLetterGuesses: 4
+  },
+  {
+    hint: 'The path of a planet around the sun',
+    answer: 'ORBIT',
+    allowedLetters: ['A', 'B', 'O', 'T', 'L', 'R', 'S', 'I'],
+    maxLetterGuesses: 4
+  },
+  {
+    hint: 'Flightless black and white Antarctic bird',
+    answer: 'PENGUIN',
+    allowedLetters: ['T', 'N', 'P', 'I', 'R', 'G', 'U', 'E'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Vehicle used for space travel',
+    answer: 'ROCKET',
+    allowedLetters: ['L', 'C', 'R', 'T', 'A', 'K', 'O', 'E'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Highest point of a mountain',
+    answer: 'SUMMIT',
+    allowedLetters: ['A', 'M', 'S', 'T', 'R', 'I', 'N', 'U'],
+    maxLetterGuesses: 4
+  },
+  {
+    hint: 'Award given to competition winners',
+    answer: 'TROPHY',
+    allowedLetters: ['L', 'O', 'T', 'H', 'A', 'R', 'Y', 'P'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Device used to shield from rain',
+    answer: 'UMBRELLA',
+    allowedLetters: ['L', 'T', 'U', 'A', 'M', 'R', 'E', 'B'],
+    maxLetterGuesses: 6
+  },
+  {
+    hint: 'Purple-blue color named after a flower',
+    answer: 'VIOLET',
+    allowedLetters: ['A', 'O', 'V', 'T', 'R', 'I', 'E', 'L'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Fictional magic user in fantasy stories',
+    answer: 'WIZARD',
+    allowedLetters: ['T', 'Z', 'W', 'D', 'L', 'A', 'R', 'I'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Classical dance performed on stage',
+    answer: 'BALLET',
+    allowedLetters: ['R', 'L', 'B', 'T', 'N', 'A', 'S', 'E'],
+    maxLetterGuesses: 4
+  },
+  {
+    hint: 'Colored wax stick used for drawing',
+    answer: 'CRAYON',
+    allowedLetters: ['T', 'A', 'C', 'N', 'L', 'Y', 'O', 'R'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Dry sandy landscape with little rain',
+    answer: 'DESERT',
+    allowedLetters: ['A', 'S', 'D', 'T', 'L', 'R', 'N', 'E'],
+    maxLetterGuesses: 4
+  },
+  {
+    hint: 'A large kingdom ruled by an emperor',
+    answer: 'EMPIRE',
+    allowedLetters: ['A', 'P', 'E', 'R', 'L', 'M', 'T', 'I'],
+    maxLetterGuesses: 4
+  },
+  {
+    hint: 'Preserved remains of an ancient creature',
+    answer: 'FOSSIL',
+    allowedLetters: ['A', 'S', 'F', 'L', 'R', 'O', 'T', 'I'],
+    maxLetterGuesses: 4
+  },
+  {
+    hint: 'Warm coverings worn on hands',
+    answer: 'GLOVES',
+    allowedLetters: ['T', 'O', 'G', 'S', 'A', 'V', 'L', 'E'],
+    maxLetterGuesses: 5
+  },
+  {
+    hint: 'Small furry rodent kept as a pet',
+    answer: 'HAMSTER',
+    allowedLetters: ['S', 'L', 'H', 'R', 'A', 'T', 'M', 'E'],
+    maxLetterGuesses: 6
+  },
+  {
+    type: 'phrase',
+    hint: 'A long journey by car',
+    answer: 'ROAD TRIP',
+    allowedLetters: ['S', 'D', 'R', 'P', 'N', 'O', 'L', 'T', 'A', 'I'],
+    maxLetterGuesses: 6
+  },
+  {
+    type: 'phrase',
+    hint: 'Famous science fiction film franchise',
+    answer: 'STAR WARS',
+    allowedLetters: ['N', 'A', 'S', 'O', 'L', 'T', 'I', 'R', 'E', 'W'],
+    maxLetterGuesses: 6
+  },
+  {
+    type: 'phrase',
+    hint: 'An evening meal everyone loves',
+    answer: 'PIZZA NIGHT',
+    allowedLetters: ['R', 'Z', 'P', 'G', 'L', 'A', 'T', 'N', 'H', 'I'],
     maxLetterGuesses: 7
   },
   {
-    hint: 'Ocean animal with eight arms',
-    answer: 'OCTOPUS',
-    allowedLetters: ['O', 'C', 'T', 'P', 'U', 'S', 'L', 'R'],
+    type: 'phrase',
+    hint: 'A group that reads together',
+    answer: 'BOOK CLUB',
+    allowedLetters: ['A', 'K', 'B', 'U', 'R', 'O', 'N', 'C', 'T', 'L'],
     maxLetterGuesses: 6
-  },
-  {
-    hint: 'Tool used to open a lock',
-    answer: 'KEY',
-    allowedLetters: ['K', 'E', 'Y', 'A', 'R', 'L', 'T', 'S'],
-    maxLetterGuesses: 2
-  },
-  {
-    hint: 'The closest star to Earth',
-    answer: 'SUN',
-    allowedLetters: ['S', 'U', 'N', 'A', 'R', 'L', 'T', 'E'],
-    maxLetterGuesses: 2
-  },
-  {
-    hint: 'Desert known for its pyramids',
-    answer: 'SAHARA',
-    allowedLetters: ['S', 'A', 'H', 'R', 'A', 'L', 'T', 'E'],
-    maxLetterGuesses: 5
-  },
-  {
-    hint: 'Tall plant with a woody trunk',
-    answer: 'TREE',
-    allowedLetters: ['T', 'R', 'E', 'E', 'A', 'L', 'S', 'N'],
-    maxLetterGuesses: 3
-  },
-  {
-    hint: 'A small computer in your pocket',
-    answer: 'PHONE',
-    allowedLetters: ['P', 'H', 'O', 'N', 'E', 'A', 'R', 'T'],
-    maxLetterGuesses: 4
-  },
-  {
-    hint: 'Sport with a hoop and a ball',
-    answer: 'BASKETBALL',
-    allowedLetters: ['B', 'A', 'S', 'K', 'E', 'T', 'L', 'R'],
-    maxLetterGuesses: 7
-  },
-  {
-    hint: 'Animal that says "moo"',
-    answer: 'COW',
-    allowedLetters: ['C', 'O', 'W', 'A', 'R', 'L', 'T', 'S'],
-    maxLetterGuesses: 2
-  },
-  {
-    hint: 'Natural satellite of Earth',
-    answer: 'MOON',
-    allowedLetters: ['M', 'O', 'O', 'N', 'A', 'R', 'T', 'S'],
-    maxLetterGuesses: 3
-  },
-  {
-    hint: 'City known as the Big Apple',
-    answer: 'NEWYORK',
-    allowedLetters: ['N', 'E', 'W', 'Y', 'O', 'R', 'K', 'L'],
-    maxLetterGuesses: 6
-  },
-  {
-    hint: 'Liquid that falls from the sky',
-    answer: 'RAIN',
-    allowedLetters: ['R', 'A', 'I', 'N', 'E', 'L', 'T', 'S'],
-    maxLetterGuesses: 3
-  },
-  {
-    hint: 'Device for typing on a computer',
-    answer: 'KEYBOARD',
-    allowedLetters: ['K', 'E', 'Y', 'B', 'O', 'A', 'R', 'D'],
-    maxLetterGuesses: 6
-  },
-  {
-    hint: 'Green gemstone often in jewelry',
-    answer: 'EMERALD',
-    allowedLetters: ['E', 'M', 'R', 'A', 'L', 'D', 'S', 'T'],
-    maxLetterGuesses: 6
-  },
-  {
-    hint: 'Large vehicle that carries passengers',
-    answer: 'BUS',
-    allowedLetters: ['B', 'U', 'S', 'A', 'R', 'L', 'T', 'E'],
-    maxLetterGuesses: 2
-  },
-  {
-    hint: 'Frozen water',
-    answer: 'ICE',
-    allowedLetters: ['I', 'C', 'E', 'A', 'R', 'L', 'T', 'S'],
-    maxLetterGuesses: 2
-  },
-  {
-    hint: 'Tool used to paint walls',
-    answer: 'BRUSH',
-    allowedLetters: ['B', 'R', 'U', 'S', 'H', 'A', 'L', 'T'],
-    maxLetterGuesses: 4
   },
   {
     type: 'phrase',
-    hint: 'A promise made on the spot',
-    answer: 'PINKY SWEAR',
-    allowedLetters: ['P', 'I', 'N', 'K', 'Y', 'S', 'W', 'E', 'A', 'R'],
+    hint: 'The glow of an urban area at night',
+    answer: 'CITY LIGHTS',
+    allowedLetters: ['A', 'T', 'C', 'H', 'R', 'L', 'S', 'Y', 'G', 'I'],
     maxLetterGuesses: 7
   },
   {
     type: 'phrase',
-    hint: 'A storm with thunder and lightning',
-    answer: 'SUMMER STORM',
-    allowedLetters: ['S', 'U', 'M', 'E', 'R', 'T', 'O', 'N', 'L', 'A'],
+    hint: 'A gathering on the sandy shore',
+    answer: 'BEACH PARTY',
+    allowedLetters: ['C', 'S', 'B', 'T', 'H', 'A', 'Y', 'P', 'R', 'E'],
     maxLetterGuesses: 7
   },
   {
     type: 'phrase',
-    hint: 'Going for a quick jog',
-    answer: 'MORNING RUN',
-    allowedLetters: ['M', 'O', 'R', 'N', 'I', 'G', 'U', 'L', 'A', 'T'],
-    maxLetterGuesses: 7
-  },
-  {
-    type: 'phrase',
-    hint: 'A short trip taken for fun',
-    answer: 'DAY OUT',
-    allowedLetters: ['D', 'A', 'Y', 'O', 'U', 'T', 'R', 'N', 'L', 'S'],
-    maxLetterGuesses: 5
-  },
-  {
-    type: 'phrase',
-    hint: 'A task that must be done',
-    answer: 'TO DO',
-    allowedLetters: ['T', 'O', 'D', 'A', 'R', 'L', 'S', 'N'],
-    maxLetterGuesses: 4
-  },
-  {
-    type: 'phrase',
-    hint: 'A cozy place by the fire',
-    answer: 'WARM CORNER',
-    allowedLetters: ['W', 'A', 'R', 'M', 'C', 'O', 'N', 'E', 'L', 'T'],
-    maxLetterGuesses: 8
-  },
-  {
-    type: 'phrase',
-    hint: 'A fresh start on Monday',
-    answer: 'NEW WEEK',
-    allowedLetters: ['N', 'E', 'W', 'K', 'A', 'R', 'L', 'S', 'T', 'I'],
+    hint: 'The moon at its brightest phase',
+    answer: 'FULL MOON',
+    allowedLetters: ['A', 'M', 'F', 'N', 'T', 'O', 'S', 'L', 'R', 'U'],
     maxLetterGuesses: 6
   },
   {
     type: 'phrase',
-    hint: 'Spending the night away from home',
-    answer: 'SLEEPOVER PARTY',
-    allowedLetters: ['S', 'L', 'E', 'P', 'O', 'V', 'R', 'T', 'A', 'Y'],
-    maxLetterGuesses: 9
-  },
-  {
-    type: 'phrase',
-    hint: 'A sweet treat after dinner',
-    answer: 'ICE CREAM',
-    allowedLetters: ['I', 'C', 'E', 'R', 'A', 'M', 'S', 'T', 'N', 'L'],
+    hint: 'A short sleep to recharge energy',
+    answer: 'POWER NAP',
+    allowedLetters: ['S', 'W', 'P', 'N', 'L', 'E', 'T', 'A', 'R', 'O'],
     maxLetterGuesses: 6
   },
   {
     type: 'phrase',
-    hint: 'A special meal with family',
-    answer: 'SUNDAY LUNCH',
-    allowedLetters: ['S', 'U', 'N', 'D', 'A', 'Y', 'L', 'C', 'H', 'T'],
-    maxLetterGuesses: 8
+    hint: 'An unpredictable or surprising element',
+    answer: 'WILD CARD',
+    allowedLetters: ['T', 'L', 'W', 'A', 'S', 'D', 'N', 'C', 'R', 'I'],
+    maxLetterGuesses: 6
+  },
+  {
+    type: 'phrase',
+    hint: 'A day off due to heavy snowfall',
+    answer: 'SNOW DAY',
+    allowedLetters: ['R', 'N', 'S', 'A', 'L', 'W', 'T', 'O', 'D', 'Y'],
+    maxLetterGuesses: 6
   }
 ];
 
